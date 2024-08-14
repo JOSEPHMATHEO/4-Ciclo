@@ -1,0 +1,445 @@
+[{
+  "_id": {
+    "$oid": "669b2d208d46f680f34447ab"
+  },
+  "pelicula": "Shrek",
+  "anio": 2001,
+  "duracion": 90,
+  "pais": "Estados Unidos",
+  "director": [
+    "Andrew Adamson",
+    "Vicky Jenson"
+  ],
+  "reparto principal": [
+    "Mike Myers",
+    "Eddie Murphy",
+    "Cameron Diaz"
+  ],
+  "musica": "Harry Gregson-Williams",
+  "compañía": [
+    "DreamWorks Animation",
+    "DreamWorks Pictures"
+  ],
+  "genero": [
+    "Animación",
+    "Aventura",
+    "Comedia"
+  ],
+  "premios": {
+    "Oscar": [
+      "Mejor Película Animada"
+    ],
+    "Globos de Oro": [
+      "Nominación a Mejor Película - Comedia o Musical"
+    ]
+  },
+  "reseñas": [
+    {
+      "sitio": "IMDb",
+      "calificacion": 7.9
+    },
+    {
+      "sitio": "FilmAffinity",
+      "calificacion": 7.5
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "669b2d208d46f680f34447ac"
+  },
+  "pelicula": "The Dark Knight",
+  "anio": 2008,
+  "duracion": 152,
+  "pais": "Estados Unidos",
+  "director": "Christopher Nolan",
+  "reparto principal": [
+    "Christian Bale",
+    "Heath Ledger",
+    "Aaron Eckhart"
+  ],
+  "musica": [
+    "Hans Zimmer",
+    "James Newton Howard"
+  ],
+  "compañía": [
+    "Warner Bros."
+  ],
+  "genero": [
+    "Acción",
+    "Crimen",
+    "Drama"
+  ],
+  "premios": {
+    "Oscar": [
+      "Mejor Actor de Reparto",
+      "Mejor Edición de Sonido"
+    ],
+    "Globos de Oro": [
+      "Mejor Actor de Reparto"
+    ]
+  },
+  "reseñas": [
+    {
+      "sitio": "IMDb",
+      "calificacion": 9
+    },
+    {
+      "sitio": "FilmAffinity",
+      "calificacion": 8.8
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "669b2d208d46f680f34447ad"
+  },
+  "pelicula": "Pulp Fiction",
+  "anio": 1994,
+  "duracion": 154,
+  "pais": "Estados Unidos",
+  "director": "Quentin Tarantino",
+  "reparto principal": [
+    "John Travolta",
+    "Uma Thurman",
+    "Samuel L. Jackson"
+  ],
+  "musica": "Various Artists",
+  "compañía": [
+    "Miramax"
+  ],
+  "genero": [
+    "Crimen",
+    "Drama"
+  ],
+  "premios": {
+    "Oscar": [
+      "Mejor Guion Original"
+    ],
+    "Globos de Oro": [
+      "Mejor Guion"
+    ]
+  },
+  "reseñas": [
+    {
+      "sitio": "IMDb",
+      "calificacion": 8.9
+    },
+    {
+      "sitio": "FilmAffinity",
+      "calificacion": 8.8
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "669b2d208d46f680f34447ae"
+  },
+  "pelicula": "Los Increibles",
+  "anio": 2004,
+  "duracion": 115,
+  "pais": "Estados Unidos",
+  "director": "Brad Bird",
+  "reparto principal": [
+    "Craig T. Nelson",
+    "Holly Hunter",
+    "Samuel L. Jackson"
+  ],
+  "musica": "Michael Giacchino",
+  "compañía": [
+    "Pixar Animation Studios",
+    "Walt Disney Pictures"
+  ],
+  "genero": [
+    "Animación",
+    "Acción",
+    "Aventura"
+  ],
+  "premios": {
+    "Oscar": [
+      "Mejor Película Animada",
+      "Mejor Edición de Sonido"
+    ],
+    "Globos de Oro": [
+      "Nominación a Mejor Película - Comedia o Musical"
+    ]
+  },
+  "reseñas": [
+    {
+      "sitio": "IMDb",
+      "calificacion": 8
+    },
+    {
+      "sitio": "FilmAffinity",
+      "calificacion": 7.6
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "669b2d208d46f680f34447af"
+  },
+  "pelicula": "Forrest Gump",
+  "anio": 1994,
+  "duracion": 142,
+  "pais": "Estados Unidos",
+  "director": "Robert Zemeckis",
+  "reparto principal": [
+    "Tom Hanks",
+    "Robin Wright",
+    "Gary Sinise"
+  ],
+  "musica": "Alan Silvestri",
+  "compañía": [
+    "Paramount Pictures"
+  ],
+  "genero": [
+    "Drama",
+    "Romance"
+  ],
+  "premios": {
+    "Oscar": [
+      "Mejor Película",
+      "Mejor Director",
+      "Mejor Actor"
+    ],
+    "Globos de Oro": [
+      "Mejor Película"
+    ]
+  },
+  "reseñas": [
+    {
+      "sitio": "IMDb",
+      "calificacion": 8.8
+    },
+    {
+      "sitio": "FilmAffinity",
+      "calificacion": 8.7
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "669b2d208d46f680f34447b0"
+  },
+  "pelicula": "Mi Villano Favorito",
+  "anio": 2010,
+  "duracion": 95,
+  "pais": "Estados Unidos",
+  "director": [
+    "Pierre Coffin",
+    "Chris Renaud"
+  ],
+  "reparto principal": [
+    "Steve Carell",
+    "Jason Segel",
+    "Russell Brand"
+  ],
+  "musica": "Heitor Pereira",
+  "compañía": [
+    "Illumination Entertainment",
+    "Universal Pictures"
+  ],
+  "genero": [
+    "Animación",
+    "Aventura",
+    "Comedia"
+  ],
+  "premios": {
+    "Oscar": [],
+    "Globos de Oro": [
+      "Nominación a Mejor Película Animada"
+    ]
+  },
+  "reseñas": [
+    {
+      "sitio": "IMDb",
+      "calificacion": 7.6
+    },
+    {
+      "sitio": "FilmAffinity",
+      "calificacion": 7.1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "669b2d208d46f680f34447b1"
+  },
+  "pelicula": "The Matrix",
+  "anio": 1999,
+  "duracion": 136,
+  "pais": "Estados Unidos",
+  "director": [
+    "Lana Wachowski",
+    "Lilly Wachowski"
+  ],
+  "reparto principal": [
+    "Keanu Reeves",
+    "Laurence Fishburne",
+    "Carrie-Anne Moss"
+  ],
+  "musica": "Don Davis",
+  "compañía": [
+    "Warner Bros."
+  ],
+  "genero": [
+    "Acción",
+    "Ciencia ficción"
+  ],
+  "premios": {
+    "Oscar": [
+      "Mejor Montaje",
+      "Mejor Sonido"
+    ],
+    "Globos de Oro": [
+      "Mejor Dirección"
+    ]
+  },
+  "reseñas": [
+    {
+      "sitio": "IMDb",
+      "calificacion": 8.7
+    },
+    {
+      "sitio": "FilmAffinity",
+      "calificacion": 8.6
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "669b2d208d46f680f34447b2"
+  },
+  "pelicula": "Toy Story",
+  "anio": 1995,
+  "duracion": 81,
+  "pais": "Estados Unidos",
+  "director": "John Lasseter",
+  "reparto principal": [
+    "Tom Hanks",
+    "Tim Allen",
+    "Don Rickles"
+  ],
+  "musica": "Randy Newman",
+  "compañía": [
+    "Pixar Animation Studios",
+    "Walt Disney Pictures"
+  ],
+  "genero": [
+    "Animación",
+    "Aventura",
+    "Comedia"
+  ],
+  "premios": {
+    "Oscar": [
+      "Premio Especial por Logro Sobresaliente",
+      "Nominación a Mejor Guion Original"
+    ],
+    "Globos de Oro": [
+      "Nominación a Mejor Película - Comedia o Musical"
+    ]
+  },
+  "reseñas": [
+    {
+      "sitio": "IMDb",
+      "calificacion": 8.3
+    },
+    {
+      "sitio": "FilmAffinity",
+      "calificacion": 7.8
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "669b2d208d46f680f34447b3"
+  },
+  "pelicula": "Buscando a Nemo",
+  "anio": 2003,
+  "duracion": 100,
+  "pais": "Estados Unidos",
+  "director": [
+    "Andrew Stanton",
+    "Lee Unkrich"
+  ],
+  "reparto principal": [
+    "Albert Brooks",
+    "Ellen DeGeneres",
+    "Alexander Gould"
+  ],
+  "musica": "Thomas Newman",
+  "compañía": [
+    "Pixar Animation Studios",
+    "Walt Disney Pictures"
+  ],
+  "genero": [
+    "Animación",
+    "Aventura",
+    "Comedia"
+  ],
+  "premios": {
+    "Oscar": [
+      "Mejor Película Animada"
+    ],
+    "Globos de Oro": [
+      "Nominación a Mejor Película - Comedia o Musical"
+    ]
+  },
+  "reseñas": [
+    {
+      "sitio": "IMDb",
+      "calificacion": 8.2
+    },
+    {
+      "sitio": "FilmAffinity",
+      "calificacion": 7.8
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "669b2d208d46f680f34447b4"
+  },
+  "pelicula": "El Rey León",
+  "anio": 1994,
+  "duracion": 88,
+  "pais": "Estados Unidos",
+  "director": [
+    "Roger Allers",
+    "Rob Minkoff"
+  ],
+  "reparto principal": [
+    "Matthew Broderick",
+    "Jeremy Irons",
+    "James Earl Jones"
+  ],
+  "musica": "Hans Zimmer",
+  "compañía": [
+    "Walt Disney Pictures"
+  ],
+  "genero": [
+    "Animación",
+    "Aventura",
+    "Drama"
+  ],
+  "premios": {
+    "Oscar": [
+      "Mejor Banda Sonora Original",
+      "Mejor Canción Original"
+    ],
+    "Globos de Oro": [
+      "Mejor Película - Comedia o Musical"
+    ]
+  },
+  "reseñas": [
+    {
+      "sitio": "IMDb",
+      "calificacion": 8.5
+    },
+    {
+      "sitio": "FilmAffinity",
+      "calificacion": 8.1
+    }
+  ]
+}]
