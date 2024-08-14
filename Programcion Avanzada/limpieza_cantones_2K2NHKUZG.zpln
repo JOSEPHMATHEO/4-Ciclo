@@ -1,0 +1,1062 @@
+{
+  "paragraphs": [
+    {
+      "text": "val dfRawData \u003d spark\n    .read\n    .parquet(\"/workspace/zeppelin-paavanzada/dataproject.parquet\")",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:03:50.379",
+      "progress": 100,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdfRawData\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [nombre_zona: string, nombre_subzona: string ... 35 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d0"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719923292627_1142381778",
+      "id": "paragraph_1719923292627_1142381778",
+      "dateCreated": "2024-07-02 12:28:12.627",
+      "dateStarted": "2024-07-02 13:03:50.382",
+      "dateFinished": "2024-07-02 13:03:52.340",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfRawData.printSchema",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 12:29:51.009",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- nombre_zona: string (nullable \u003d true)\n |-- nombre_subzona: string (nullable \u003d true)\n |-- nombre_canton: string (nullable \u003d true)\n |-- presunta_subinfraccion: string (nullable \u003d true)\n |-- fecha_detencion_aprehension: timestamp (nullable \u003d true)\n |-- sexo: string (nullable \u003d true)\n |-- edad: integer (nullable \u003d true)\n |-- nacionalidad: string (nullable \u003d true)\n |-- presunta_flagrancia: string (nullable \u003d true)\n |-- tipo: string (nullable \u003d true)\n |-- autoidentificacion_etnica: string (nullable \u003d true)\n |-- numero_detenciones: byte (nullable \u003d true)\n |-- nombre_provincia: string (nullable \u003d true)\n |-- nombre_parroquia: string (nullable \u003d true)\n |-- nombre_distrito: string (nullable \u003d true)\n |-- codigo_distrito: string (nullable \u003d true)\n |-- nombre_circuito: string (nullable \u003d true)\n |-- codigo_circuito: string (nullable \u003d true)\n |-- nombre_subcircuito: string (nullable \u003d true)\n |-- codigo_subcircuito: string (nullable \u003d true)\n |-- lugar: string (nullable \u003d true)\n |-- presunta_infraccion: string (nullable \u003d true)\n |-- hora_detencion_aprehension: timestamp (nullable \u003d true)\n |-- codigo_iccs: string (nullable \u003d true)\n |-- estado_civil: string (nullable \u003d true)\n |-- estatus_migratorio: string (nullable \u003d true)\n |-- genero: string (nullable \u003d true)\n |-- nivel_de_instruccion: string (nullable \u003d true)\n |-- condicion: string (nullable \u003d true)\n |-- movilizacion: string (nullable \u003d true)\n |-- tipo_arma: string (nullable \u003d true)\n |-- arma: string (nullable \u003d true)\n |-- tipo_lugar: string (nullable \u003d true)\n |-- codigo_provincia: string (nullable \u003d true)\n |-- codigo_canton: short (nullable \u003d true)\n |-- codigo_parroquia: integer (nullable \u003d true)\n |-- presunta_modalidad: string (nullable \u003d true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719923361125_1288849975",
+      "id": "paragraph_1719923361125_1288849975",
+      "dateCreated": "2024-07-02 12:29:21.125",
+      "dateStarted": "2024-07-02 12:29:51.012",
+      "dateFinished": "2024-07-02 12:29:51.241",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfRawData\n    .select(\"nombre_canton\")\n    .distinct\n    .orderBy(\"nombre_canton\")\n    .show(false)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 12:30:59.792",
+      "progress": 100,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------------------------+\n|nombre_canton           |\n+------------------------+\n|24 DE MAYO              |\n|AGUARICO                |\n|ALAUSI                  |\n|ALFREDO BAQUERIZO MORENO|\n|AMBATO                  |\n|ANTONIO ANTE            |\n|ARAJUNO                 |\n|ARCHIDONA               |\n|ARENILLAS               |\n|ATACAMES                |\n|ATAHUALPA               |\n|AZOGUES                 |\n|BA?æOS DE AGUA SANTA    |\n|BABA                    |\n|BABAHOYO                |\n|BALAO                   |\n|BALSAS                  |\n|BALZAR                  |\n|BAÃ‘OS DE AGUA SANTA    |\n|BAÐOS DE AGUA SANTA     |\n+------------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d1"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d2"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719923391011_986474900",
+      "id": "paragraph_1719923391011_986474900",
+      "dateCreated": "2024-07-02 12:29:51.011",
+      "dateStarted": "2024-07-02 12:30:59.795",
+      "dateFinished": "2024-07-02 12:31:04.802",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfRawData\n    .select(\"nombre_canton\")\n    .filter($\"nombre_canton\".rlike(\"\\\\w*[^\\\\x00-\\\\x7FáéíóúÁÉÍÓÚñÑüÜ]+\\\\w*\"))\n    .distinct\n    .orderBy(\"nombre_canton\")\n    .show(false)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 12:46:52.002",
+      "progress": 64,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------------------------+\n|nombre_canton              |\n+---------------------------+\n|BA?æOS DE AGUA SANTA       |\n|BAÃ‘OS DE AGUA SANTA       |\n|BAÐOS DE AGUA SANTA        |\n|CAÃ‘AR                     |\n|CRNEL. MARCELINO MARIDUE?æA|\n|CRNEL. MARCELINO MARIDUEÃ‘A|\n|CRNEL. MARCELINO MARIDUEÐA |\n|LOGRO?æO                   |\n|LOGROÃO                   |\n|LOGROÐO                    |\n|O?æA                       |\n|PI?æAS                     |\n|PIÃ‘AS                     |\n|PIÐAS                      |\n|RUMIÃAHUI                 |\n|RUMIÐAHUI                  |\n+---------------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d3"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d4"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719923459794_743100275",
+      "id": "paragraph_1719923459794_743100275",
+      "dateCreated": "2024-07-02 12:30:59.794",
+      "dateStarted": "2024-07-02 12:46:52.005",
+      "dateFinished": "2024-07-02 12:46:54.353",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfRawData.select(\"nombre_canton\")\n    .filter(\n        $\"nombre_canton\".contains(\"?æ\") ||\n        $\"nombre_canton\".contains(\"Ã‘\") ||\n        $\"nombre_canton\".contains(\"Ð\") ||\n        $\"nombre_canton\".contains(\"Ã\")\n    )\n    .count",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:03:55.520",
+      "progress": 7,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres2\u001b[0m: \u001b[1m\u001b[32mLong\u001b[0m \u003d 3639\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d1"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d2"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719924412005_395144210",
+      "id": "paragraph_1719924412005_395144210",
+      "dateCreated": "2024-07-02 12:46:52.005",
+      "dateStarted": "2024-07-02 13:03:55.525",
+      "dateFinished": "2024-07-02 13:03:57.368",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val dfRawData2 \u003d dfRawData\n    .withColumn(\"nombre_canton\",\n        when($\"nombre_canton\".contains(\"?æ\"), regexp_replace($\"nombre_canton\", \"\\\\?æ\", \"Ñ\"))\n        .when($\"nombre_canton\".contains(\"Ã‘\"), regexp_replace($\"nombre_canton\", \"\\\\Ã‘\", \"Ñ\"))\n        .when($\"nombre_canton\".contains(\"Ð\"), regexp_replace($\"nombre_canton\", \"\\\\Ð\", \"Ñ\"))\n        .when($\"nombre_canton\".contains(\"Ã\"), regexp_replace($\"nombre_canton\", \"\\\\Ã\", \"Ñ\"))\n        .otherwise($\"nombre_canton\")\n    )",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:28:15.869",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdfRawData2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [nombre_zona: string, nombre_subzona: string ... 35 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719924664800_1503166948",
+      "id": "paragraph_1719924664800_1503166948",
+      "dateCreated": "2024-07-02 12:51:04.800",
+      "dateStarted": "2024-07-02 13:28:15.872",
+      "dateFinished": "2024-07-02 13:28:16.041",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfRawData2\n    .select(\"nombre_canton\")\n    .filter($\"nombre_canton\".rlike(\"\\\\w*[^\\\\x00-\\\\x7FáéíóúÁÉÍÓÚñÑüÜ]+\\\\w*\"))\n    .distinct\n    .orderBy(\"nombre_canton\")\n    .show(false)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:28:18.976",
+      "progress": 71,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------+\n|nombre_canton|\n+-------------+\n+-------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d21"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719925972112_654854017",
+      "id": "paragraph_1719925972112_654854017",
+      "dateCreated": "2024-07-02 13:12:52.112",
+      "dateStarted": "2024-07-02 13:28:18.980",
+      "dateFinished": "2024-07-02 13:28:20.194",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfRawData2\n    .select(\"nombre_canton\")\n    .distinct\n    .count",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:12:28.669",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres3\u001b[0m: \u001b[1m\u001b[32mLong\u001b[0m \u003d 232\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d3"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d4"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d5"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719925440496_1996607555",
+      "id": "paragraph_1719925440496_1996607555",
+      "dateCreated": "2024-07-02 13:04:00.497",
+      "dateStarted": "2024-07-02 13:12:28.672",
+      "dateFinished": "2024-07-02 13:12:30.199",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfRawData2\n    .select(\"nombre_canton\")\n    .distinct\n    .orderBy(\"nombre_canton\")\n    .show(232, false)\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:12:33.144",
+      "progress": 50,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------------------------+\n|nombre_canton               |\n+----------------------------+\n|24 DE MAYO                  |\n|AGUARICO                    |\n|ALAUSI                      |\n|ALFREDO BAQUERIZO MORENO    |\n|AMBATO                      |\n|ANTONIO ANTE                |\n|ARAJUNO                     |\n|ARCHIDONA                   |\n|ARENILLAS                   |\n|ATACAMES                    |\n|ATAHUALPA                   |\n|AZOGUES                     |\n|BABA                        |\n|BABAHOYO                    |\n|BALAO                       |\n|BALSAS                      |\n|BALZAR                      |\n|BAÑOS DE AGUA SANTA         |\n|BIBLIAN                     |\n|BOLIVAR                     |\n|BUENA FE                    |\n|CALUMA                      |\n|CALVAS                      |\n|CAMILO PONCE ENRIQUEZ       |\n|CANAR                       |\n|CARLOS JULIO AROSEMENA TOLA |\n|CASCALES                    |\n|CATAMAYO                    |\n|CAYAMBE                     |\n|CAÑAR                       |\n|CELICA                      |\n|CENTINELA DEL CONDOR        |\n|CEVALLOS                    |\n|CHAGUARPAMBA                |\n|CHAMBO                      |\n|CHILLA                      |\n|CHILLANES                   |\n|CHIMBO                      |\n|CHINCHIPE                   |\n|CHONE                       |\n|CHORDELEG                   |\n|CHUNCHI                     |\n|COLIMES                     |\n|COLTA                       |\n|COTACACHI                   |\n|CRNEL. MARCELINO MARIDUEÑA  |\n|CUENCA                      |\n|CUMANDA                     |\n|CUYABENO                    |\n|DAULE                       |\n|DELEG                       |\n|DMG                         |\n|DMQ                         |\n|DURAN                       |\n|ECHEANDIA                   |\n|EL CARMEN                   |\n|EL CHACO                    |\n|EL GUABO                    |\n|EL PAN                      |\n|EL PANGUI                   |\n|EL PIEDRERO                 |\n|EL TAMBO                    |\n|EL TRIUNFO                  |\n|ELOY ALFARO                 |\n|EMPALME                     |\n|ESMERALDAS                  |\n|ESPEJO                      |\n|ESPINDOLA                   |\n|FLAVIO ALFARO               |\n|GIRON                       |\n|GNRAL. ANTONIO ELIZALDE     |\n|GONZALO PIZARRO             |\n|GONZANAMA                   |\n|GUACHAPALA                  |\n|GUALACEO                    |\n|GUALAQUIZA                  |\n|GUAMOTE                     |\n|GUANO                       |\n|GUARANDA                    |\n|GUAYAQUIL                   |\n|HUAMBOYA                    |\n|HUAQUILLAS                  |\n|IBARRA                      |\n|ISABELA                     |\n|ISIDRO AYORA                |\n|JAMA                        |\n|JARAMIJO                    |\n|JIPIJAPA                    |\n|JUNIN                       |\n|LA CONCORDIA                |\n|LA JOYA DE LOS SACHAS       |\n|LA LIBERTAD                 |\n|LA MANA                     |\n|LA TRONCAL                  |\n|LAGO AGRIO                  |\n|LAS GOLONDRINAS             |\n|LAS LAJAS                   |\n|LAS NAVES                   |\n|LATACUNGA                   |\n|LIMON INDANZA               |\n|LOGROÑO                     |\n|LOJA                        |\n|LOMAS DE SARGENTILLO        |\n|LORETO                      |\n|MACARA                      |\n|MACHALA                     |\n|MANGA DEL CURA              |\n|MANTA                       |\n|MAR TERRITORIAL             |\n|MARCABELI                   |\n|MEJIA                       |\n|MERA                        |\n|MILAGRO                     |\n|MIRA                        |\n|MOCACHE                     |\n|MOCHA                       |\n|MONTALVO                    |\n|MONTECRISTI                 |\n|MONTUFAR                    |\n|MORONA                      |\n|MUISNE                      |\n|NABON                       |\n|NANGARITZA                  |\n|NARANJAL                    |\n|NARANJITO                   |\n|NOBOL                       |\n|OLMEDO                      |\n|ORELLANA                    |\n|OTAVALO                     |\n|OÑA                         |\n|PABLO SEXTO                 |\n|PAJAN                       |\n|PALANDA                     |\n|PALENQUE                    |\n|PALESTINA                   |\n|PALLATANGA                  |\n|PALORA                      |\n|PALTAS                      |\n|PANGUA                      |\n|PAQUISHA                    |\n|PASAJE                      |\n|PASTAZA                     |\n|PATATE                      |\n|PAUTE                       |\n|PEDERNALES                  |\n|PEDRO CARBO                 |\n|PEDRO MONCAYO               |\n|PEDRO VICENTE MALDONADO     |\n|PENIPE                      |\n|PICHINCHA                   |\n|PIMAMPIRO                   |\n|PINDAL                      |\n|PIÑAS                       |\n|PLAYAS                      |\n|PORTOVELO                   |\n|PORTOVIEJO                  |\n|PUCARA                      |\n|PUEBLO VIEJO                |\n|PUEBLOVIEJO                 |\n|PUERTO FRANCISCO DE ORELLANA|\n|PUERTO LOPEZ                |\n|PUERTO QUITO                |\n|PUJILI                      |\n|PUTUMAYO                    |\n|PUYANGO                     |\n|QUERO                       |\n|QUEVEDO                     |\n|QUIJOS                      |\n|QUILANGA                    |\n|QUININDE                    |\n|QUINSALOMA                  |\n|QUITO                       |\n|RIOBAMBA                    |\n|RIOVERDE                    |\n|ROCAFUERTE                  |\n|RUMINAHUI                   |\n|RUMIÑAHUI                   |\n|RUMIÑAHUI 2                 |\n|SALCEDO                     |\n|SALINAS                     |\n|SALITRE                     |\n|SAMBORONDON                 |\n|SAN CRISTOBAL               |\n|SAN FERNANDO                |\n|SAN JACINTO DE YAGUACHI     |\n|SAN JUAN BOSCO              |\n|SAN LORENZO                 |\n|SAN MIGUEL                  |\n|SAN MIGUEL DE  BOLIVAR      |\n|SAN MIGUEL DE LOS BANCOS    |\n|SAN MIGUEL DE SALCEDO       |\n|SAN MIGUEL DE URCUQUI       |\n|SAN PEDRO DE HUACA          |\n|SAN PEDRO DE PELILEO        |\n|SAN VICENTE                 |\n|SANTA ANA                   |\n|SANTA CLARA                 |\n|SANTA CRUZ                  |\n|SANTA ELENA                 |\n|SANTA ISABEL                |\n|SANTA LUCIA                 |\n|SANTA ROSA                  |\n|SANTIAGO                    |\n|SANTIAGO DE PILLARO         |\n|SANTO DOMINGO               |\n|SAQUISILI                   |\n|SARAGURO                    |\n|SEVILLA DE ORO              |\n|SHUSHUFINDI                 |\n|SIGCHOS                     |\n|SIGSIG                      |\n|SIMON BOLIVAR               |\n|SOZORANGA                   |\n|SUCRE                       |\n|SUCUA                       |\n|SUCUMBIOS                   |\n|SUSCAL                      |\n|TAISHA                      |\n|TENA                        |\n|TISALEO                     |\n|TIWINTZA                    |\n|TOSAGUA                     |\n|TULCAN                      |\n|URDANETA                    |\n|VALENCIA                    |\n|VENTANAS                    |\n|VINCES                      |\n|YACUAMBI                    |\n|YANTZAZA                    |\n|ZAMORA                      |\n|ZAPOTILLO                   |\n|ZARUMA                      |\n+----------------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d6"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d7"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719925558705_333309909",
+      "id": "paragraph_1719925558705_333309909",
+      "dateCreated": "2024-07-02 13:05:58.705",
+      "dateStarted": "2024-07-02 13:12:33.146",
+      "dateFinished": "2024-07-02 13:12:33.981",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val dfCantonNombreSim1 \u003d dfRawData2\n    .select(\"nombre_canton\")\n    .distinct\nval dfCantonNombreSim2 \u003d dfRawData2\n    .select($\"nombre_canton\".as(\"nombre_canton_2\"))\n    .distinct",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:28:44.329",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdfCantonNombreSim1\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [nombre_canton: string]\n\u001b[1m\u001b[34mdfCantonNombreSim2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [nombre_canton_2: string]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719925953146_1219199500",
+      "id": "paragraph_1719925953146_1219199500",
+      "dateCreated": "2024-07-02 13:12:33.146",
+      "dateStarted": "2024-07-02 13:28:44.331",
+      "dateFinished": "2024-07-02 13:28:44.501",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\ncos() no estaá implementando",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:17:38.007",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003ecos() no estaá implementando\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719926230092_1054715475",
+      "id": "paragraph_1719926230092_1054715475",
+      "dateCreated": "2024-07-02 13:17:10.092",
+      "dateStarted": "2024-07-02 13:17:38.007",
+      "dateFinished": "2024-07-02 13:17:40.211",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val dfCantonNombreSim \u003d dfCantonNombreSim1.crossJoin(dfCantonNombreSim2).\n    withColumn(\"distancia\", levenshtein($\"nombre_canton\", $\"nombre_canton_2\"))",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:28:46.921",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdfCantonNombreSim\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [nombre_canton: string, nombre_canton_2: string ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719926157579_333873695",
+      "id": "paragraph_1719926157579_333873695",
+      "dateCreated": "2024-07-02 13:15:57.579",
+      "dateStarted": "2024-07-02 13:28:46.923",
+      "dateFinished": "2024-07-02 13:28:47.032",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfCantonNombreSim.show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:28:50.145",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------+--------------------+---------+\n|nombre_canton|     nombre_canton_2|distancia|\n+-------------+--------------------+---------+\n|    CHINCHIPE|           CHINCHIPE|        0|\n|    CHINCHIPE|            BABAHOYO|        8|\n|    CHINCHIPE|               MEJIA|        8|\n|    CHINCHIPE|           CHORDELEG|        7|\n|    CHINCHIPE|             EMPALME|        8|\n|    CHINCHIPE|SAN PEDRO DE PELILEO|       18|\n|    CHINCHIPE|         SAN LORENZO|       10|\n|    CHINCHIPE|            EL TAMBO|        9|\n|    CHINCHIPE|             MOCACHE|        6|\n|    CHINCHIPE|            VENTANAS|        8|\n|    CHINCHIPE|              VINCES|        6|\n|    CHINCHIPE|        ISIDRO AYORA|       11|\n|    CHINCHIPE|            SARAGURO|        9|\n|    CHINCHIPE|              PUCARA|        8|\n|    CHINCHIPE|              PANGUA|        8|\n|    CHINCHIPE|LOMAS DE SARGENTILLO|       19|\n|    CHINCHIPE|         SANTA CLARA|       10|\n|    CHINCHIPE|          HUAQUILLAS|        9|\n|    CHINCHIPE|           NARANJITO|        8|\n|    CHINCHIPE|         PUEBLOVIEJO|       10|\n+-------------+--------------------+---------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d22"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d23"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d24"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719926360557_1162188892",
+      "id": "paragraph_1719926360557_1162188892",
+      "dateCreated": "2024-07-02 13:19:20.557",
+      "dateStarted": "2024-07-02 13:28:50.148",
+      "dateFinished": "2024-07-02 13:28:50.836",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfCantonNombreSim.where($\"distancia\" \u003d\u003d\u003d 0).show(false)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:28:55.153",
+      "progress": 57,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+--------------------+---------+\n|nombre_canton       |nombre_canton_2     |distancia|\n+--------------------+--------------------+---------+\n|CHINCHIPE           |CHINCHIPE           |0        |\n|BABAHOYO            |BABAHOYO            |0        |\n|MEJIA               |MEJIA               |0        |\n|CHORDELEG           |CHORDELEG           |0        |\n|EMPALME             |EMPALME             |0        |\n|SAN PEDRO DE PELILEO|SAN PEDRO DE PELILEO|0        |\n|SAN LORENZO         |SAN LORENZO         |0        |\n|EL TAMBO            |EL TAMBO            |0        |\n|MOCACHE             |MOCACHE             |0        |\n|VENTANAS            |VENTANAS            |0        |\n|VINCES              |VINCES              |0        |\n|ISIDRO AYORA        |ISIDRO AYORA        |0        |\n|SARAGURO            |SARAGURO            |0        |\n|PUCARA              |PUCARA              |0        |\n|PANGUA              |PANGUA              |0        |\n|LOMAS DE SARGENTILLO|LOMAS DE SARGENTILLO|0        |\n|SANTA CLARA         |SANTA CLARA         |0        |\n|HUAQUILLAS          |HUAQUILLAS          |0        |\n|NARANJITO           |NARANJITO           |0        |\n|PUEBLOVIEJO         |PUEBLOVIEJO         |0        |\n+--------------------+--------------------+---------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d25"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d26"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d27"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719926369441_261841989",
+      "id": "paragraph_1719926369441_261841989",
+      "dateCreated": "2024-07-02 13:19:29.441",
+      "dateStarted": "2024-07-02 13:28:55.155",
+      "dateFinished": "2024-07-02 13:28:55.901",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfCantonNombreSim.where($\"distancia\" \u003d\u003d\u003d 1).show(false)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:28:58.653",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------+---------------+---------+\n|nombre_canton|nombre_canton_2|distancia|\n+-------------+---------------+---------+\n|PUEBLOVIEJO  |PUEBLO VIEJO   |1        |\n|CHAMBO       |CHIMBO         |1        |\n|MIRA         |MERA           |1        |\n|CHIMBO       |CHAMBO         |1        |\n|MERA         |MIRA           |1        |\n|RUMIÑAHUI    |RUMINAHUI      |1        |\n|CAÑAR        |CANAR          |1        |\n|RUMINAHUI    |RUMIÑAHUI      |1        |\n|PUEBLO VIEJO |PUEBLOVIEJO    |1        |\n|CANAR        |CAÑAR          |1        |\n|DMQ          |DMG            |1        |\n|DMG          |DMQ            |1        |\n+-------------+---------------+---------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d28"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d29"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d30"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719926507021_2103004458",
+      "id": "paragraph_1719926507021_2103004458",
+      "dateCreated": "2024-07-02 13:21:47.021",
+      "dateStarted": "2024-07-02 13:28:58.658",
+      "dateFinished": "2024-07-02 13:28:59.260",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfCantonNombreSim.where($\"distancia\" \u003d\u003d\u003d 2).show(false)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:29:03.501",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------+---------------+---------+\n|nombre_canton|nombre_canton_2|distancia|\n+-------------+---------------+---------+\n|MEJIA        |MERA           |2        |\n|PUCARA       |MACARA         |2        |\n|PORTOVIEJO   |PORTOVELO      |2        |\n|DAULE        |PAUTE          |2        |\n|PALORA       |ZAMORA         |2        |\n|ZARUMA       |CALUMA         |2        |\n|SUCUA        |SUCRE          |2        |\n|PORTOVELO    |PORTOVIEJO     |2        |\n|NABON        |NOBOL          |2        |\n|BALAO        |BALZAR         |2        |\n|BALAO        |BALSAS         |2        |\n|BALAO        |BABA           |2        |\n|JAMA         |BABA           |2        |\n|BALZAR       |BALAO          |2        |\n|BALZAR       |BALSAS         |2        |\n|PALTAS       |BALSAS         |2        |\n|PALTAS       |CALVAS         |2        |\n|CALUMA       |ZARUMA         |2        |\n|QUERO        |QUITO          |2        |\n|ZAMORA       |PALORA         |2        |\n+-------------+---------------+---------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d31"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d32"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d33"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719926522484_1057796144",
+      "id": "paragraph_1719926522484_1057796144",
+      "dateCreated": "2024-07-02 13:22:02.484",
+      "dateStarted": "2024-07-02 13:29:03.503",
+      "dateFinished": "2024-07-02 13:29:03.927",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val dfRawData3 \u003d dfRawData2\n    .na\n    .replace(\"nombre_canton\", map(\"CANAR\"))",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:30:06.898",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719926794744_1080198600",
+      "id": "paragraph_1719926794744_1080198600",
+      "dateCreated": "2024-07-02 13:26:34.744",
+      "status": "READY"
+    },
+    {
+      "text": "val replacement \u003d Map(\n    \"CANAR\" -\u003e \"CAÑAR\",\n    \"PUEBLO VIEJO\" -\u003e \"PUEBLOVIEJO\",\n    \"RUMINAHUI\" -\u003e \"RUMIÑAHUI\",\n    \"RUMIÑAHUI 2\" -\u003e \"RUMIÑAHUI\"\n    )\n\nval dfdRawData3 \u003d dfRawData2\n    .na\n    .replace(\"nombre_canton\", replacement)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:33:50.189",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mreplacement\u001b[0m: \u001b[1m\u001b[32mscala.collection.immutable.Map[String,String]\u001b[0m \u003d Map(CANAR -\u003e CAÑAR, PUEBLO VIEJO -\u003e PUEBLOVIEJO, RUMINAHUI -\u003e RUMIÑAHUI, RUMIÑAHUI 2 -\u003e RUMIÑAHUI)\n\u001b[1m\u001b[34mdfdRawData3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [nombre_zona: string, nombre_subzona: string ... 35 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719927013054_1208449475",
+      "id": "paragraph_1719927013054_1208449475",
+      "dateCreated": "2024-07-02 13:30:13.054",
+      "dateStarted": "2024-07-02 13:33:50.191",
+      "dateFinished": "2024-07-02 13:33:50.457",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfdRawData3\n    .select(\"nombre_canton\")\n    .distinct\n    .count",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:34:26.653",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres15\u001b[0m: \u001b[1m\u001b[32mLong\u001b[0m \u003d 228\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d34"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d35"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d36"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719927230191_1643570743",
+      "id": "paragraph_1719927230191_1643570743",
+      "dateCreated": "2024-07-02 13:33:50.191",
+      "dateStarted": "2024-07-02 13:34:26.656",
+      "dateFinished": "2024-07-02 13:34:27.725",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfdRawData3\n    .select(\"nombre_canton\")\n    .distinct\n    .orderBy(\"nombre_canton\")\n    .show(228, false)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-02 13:35:55.621",
+      "progress": 35,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------------------------+\n|nombre_canton               |\n+----------------------------+\n|24 DE MAYO                  |\n|AGUARICO                    |\n|ALAUSI                      |\n|ALFREDO BAQUERIZO MORENO    |\n|AMBATO                      |\n|ANTONIO ANTE                |\n|ARAJUNO                     |\n|ARCHIDONA                   |\n|ARENILLAS                   |\n|ATACAMES                    |\n|ATAHUALPA                   |\n|AZOGUES                     |\n|BABA                        |\n|BABAHOYO                    |\n|BALAO                       |\n|BALSAS                      |\n|BALZAR                      |\n|BAÑOS DE AGUA SANTA         |\n|BIBLIAN                     |\n|BOLIVAR                     |\n|BUENA FE                    |\n|CALUMA                      |\n|CALVAS                      |\n|CAMILO PONCE ENRIQUEZ       |\n|CARLOS JULIO AROSEMENA TOLA |\n|CASCALES                    |\n|CATAMAYO                    |\n|CAYAMBE                     |\n|CAÑAR                       |\n|CELICA                      |\n|CENTINELA DEL CONDOR        |\n|CEVALLOS                    |\n|CHAGUARPAMBA                |\n|CHAMBO                      |\n|CHILLA                      |\n|CHILLANES                   |\n|CHIMBO                      |\n|CHINCHIPE                   |\n|CHONE                       |\n|CHORDELEG                   |\n|CHUNCHI                     |\n|COLIMES                     |\n|COLTA                       |\n|COTACACHI                   |\n|CRNEL. MARCELINO MARIDUEÑA  |\n|CUENCA                      |\n|CUMANDA                     |\n|CUYABENO                    |\n|DAULE                       |\n|DELEG                       |\n|DMG                         |\n|DMQ                         |\n|DURAN                       |\n|ECHEANDIA                   |\n|EL CARMEN                   |\n|EL CHACO                    |\n|EL GUABO                    |\n|EL PAN                      |\n|EL PANGUI                   |\n|EL PIEDRERO                 |\n|EL TAMBO                    |\n|EL TRIUNFO                  |\n|ELOY ALFARO                 |\n|EMPALME                     |\n|ESMERALDAS                  |\n|ESPEJO                      |\n|ESPINDOLA                   |\n|FLAVIO ALFARO               |\n|GIRON                       |\n|GNRAL. ANTONIO ELIZALDE     |\n|GONZALO PIZARRO             |\n|GONZANAMA                   |\n|GUACHAPALA                  |\n|GUALACEO                    |\n|GUALAQUIZA                  |\n|GUAMOTE                     |\n|GUANO                       |\n|GUARANDA                    |\n|GUAYAQUIL                   |\n|HUAMBOYA                    |\n|HUAQUILLAS                  |\n|IBARRA                      |\n|ISABELA                     |\n|ISIDRO AYORA                |\n|JAMA                        |\n|JARAMIJO                    |\n|JIPIJAPA                    |\n|JUNIN                       |\n|LA CONCORDIA                |\n|LA JOYA DE LOS SACHAS       |\n|LA LIBERTAD                 |\n|LA MANA                     |\n|LA TRONCAL                  |\n|LAGO AGRIO                  |\n|LAS GOLONDRINAS             |\n|LAS LAJAS                   |\n|LAS NAVES                   |\n|LATACUNGA                   |\n|LIMON INDANZA               |\n|LOGROÑO                     |\n|LOJA                        |\n|LOMAS DE SARGENTILLO        |\n|LORETO                      |\n|MACARA                      |\n|MACHALA                     |\n|MANGA DEL CURA              |\n|MANTA                       |\n|MAR TERRITORIAL             |\n|MARCABELI                   |\n|MEJIA                       |\n|MERA                        |\n|MILAGRO                     |\n|MIRA                        |\n|MOCACHE                     |\n|MOCHA                       |\n|MONTALVO                    |\n|MONTECRISTI                 |\n|MONTUFAR                    |\n|MORONA                      |\n|MUISNE                      |\n|NABON                       |\n|NANGARITZA                  |\n|NARANJAL                    |\n|NARANJITO                   |\n|NOBOL                       |\n|OLMEDO                      |\n|ORELLANA                    |\n|OTAVALO                     |\n|OÑA                         |\n|PABLO SEXTO                 |\n|PAJAN                       |\n|PALANDA                     |\n|PALENQUE                    |\n|PALESTINA                   |\n|PALLATANGA                  |\n|PALORA                      |\n|PALTAS                      |\n|PANGUA                      |\n|PAQUISHA                    |\n|PASAJE                      |\n|PASTAZA                     |\n|PATATE                      |\n|PAUTE                       |\n|PEDERNALES                  |\n|PEDRO CARBO                 |\n|PEDRO MONCAYO               |\n|PEDRO VICENTE MALDONADO     |\n|PENIPE                      |\n|PICHINCHA                   |\n|PIMAMPIRO                   |\n|PINDAL                      |\n|PIÑAS                       |\n|PLAYAS                      |\n|PORTOVELO                   |\n|PORTOVIEJO                  |\n|PUCARA                      |\n|PUEBLOVIEJO                 |\n|PUERTO FRANCISCO DE ORELLANA|\n|PUERTO LOPEZ                |\n|PUERTO QUITO                |\n|PUJILI                      |\n|PUTUMAYO                    |\n|PUYANGO                     |\n|QUERO                       |\n|QUEVEDO                     |\n|QUIJOS                      |\n|QUILANGA                    |\n|QUININDE                    |\n|QUINSALOMA                  |\n|QUITO                       |\n|RIOBAMBA                    |\n|RIOVERDE                    |\n|ROCAFUERTE                  |\n|RUMIÑAHUI                   |\n|SALCEDO                     |\n|SALINAS                     |\n|SALITRE                     |\n|SAMBORONDON                 |\n|SAN CRISTOBAL               |\n|SAN FERNANDO                |\n|SAN JACINTO DE YAGUACHI     |\n|SAN JUAN BOSCO              |\n|SAN LORENZO                 |\n|SAN MIGUEL                  |\n|SAN MIGUEL DE  BOLIVAR      |\n|SAN MIGUEL DE LOS BANCOS    |\n|SAN MIGUEL DE SALCEDO       |\n|SAN MIGUEL DE URCUQUI       |\n|SAN PEDRO DE HUACA          |\n|SAN PEDRO DE PELILEO        |\n|SAN VICENTE                 |\n|SANTA ANA                   |\n|SANTA CLARA                 |\n|SANTA CRUZ                  |\n|SANTA ELENA                 |\n|SANTA ISABEL                |\n|SANTA LUCIA                 |\n|SANTA ROSA                  |\n|SANTIAGO                    |\n|SANTIAGO DE PILLARO         |\n|SANTO DOMINGO               |\n|SAQUISILI                   |\n|SARAGURO                    |\n|SEVILLA DE ORO              |\n|SHUSHUFINDI                 |\n|SIGCHOS                     |\n|SIGSIG                      |\n|SIMON BOLIVAR               |\n|SOZORANGA                   |\n|SUCRE                       |\n|SUCUA                       |\n|SUCUMBIOS                   |\n|SUSCAL                      |\n|TAISHA                      |\n|TENA                        |\n|TISALEO                     |\n|TIWINTZA                    |\n|TOSAGUA                     |\n|TULCAN                      |\n|URDANETA                    |\n|VALENCIA                    |\n|VENTANAS                    |\n|VINCES                      |\n|YACUAMBI                    |\n|YANTZAZA                    |\n|ZAMORA                      |\n|ZAPOTILLO                   |\n|ZARUMA                      |\n+----------------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d37"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d38"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719927266655_1653896053",
+      "id": "paragraph_1719927266655_1653896053",
+      "dateCreated": "2024-07-02 13:34:26.656",
+      "dateStarted": "2024-07-02 13:35:55.623",
+      "dateFinished": "2024-07-02 13:35:56.524",
+      "status": "FINISHED"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1719927339448_885667428",
+      "id": "paragraph_1719927339448_885667428",
+      "dateCreated": "2024-07-02 13:35:39.448",
+      "status": "READY"
+    }
+  ],
+  "name": "limpieza_cantones",
+  "id": "2K2NHKUZG",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.11.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

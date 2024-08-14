@@ -1,0 +1,3244 @@
+{
+  "paragraphs": [
+    {
+      "text": "val dfDetenidos\u003d spark\n    .read\n    .parquet(\"/workspace/zeppelin-paavanzada/dfFinalLimpio.parquet\")",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:12.464",
+      "progress": 100,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdfDetenidos\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [nombre_provincia: string, nombre_canton: string ... 37 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d126"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721859825036_732300159",
+      "id": "paragraph_1721859825036_732300159",
+      "dateCreated": "2024-07-24 22:23:45.036",
+      "dateStarted": "2024-07-25 00:01:12.468",
+      "dateFinished": "2024-07-25 00:01:12.676",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfDetenidos.printSchema",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:12.768",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- nombre_provincia: string (nullable \u003d true)\n |-- nombre_canton: string (nullable \u003d true)\n |-- nombre_zona: string (nullable \u003d true)\n |-- nombre_subzona: string (nullable \u003d true)\n |-- presunta_subinfraccion: string (nullable \u003d true)\n |-- fecha_detencion_aprehension: timestamp (nullable \u003d true)\n |-- sexo: string (nullable \u003d true)\n |-- edad: integer (nullable \u003d true)\n |-- nacionalidad: string (nullable \u003d true)\n |-- presunta_flagrancia: string (nullable \u003d true)\n |-- tipo: string (nullable \u003d true)\n |-- autoidentificacion_etnica: string (nullable \u003d true)\n |-- numero_detenciones: byte (nullable \u003d true)\n |-- nombre_parroquia: string (nullable \u003d true)\n |-- nombre_distrito: string (nullable \u003d true)\n |-- codigo_distrito: string (nullable \u003d true)\n |-- nombre_circuito: string (nullable \u003d true)\n |-- codigo_circuito: string (nullable \u003d true)\n |-- nombre_subcircuito: string (nullable \u003d true)\n |-- codigo_subcircuito: string (nullable \u003d true)\n |-- lugar: string (nullable \u003d true)\n |-- presunta_infraccion: string (nullable \u003d true)\n |-- hora_detencion_aprehension: timestamp (nullable \u003d true)\n |-- codigo_iccs: string (nullable \u003d true)\n |-- estado_civil: string (nullable \u003d true)\n |-- estatus_migratorio: string (nullable \u003d true)\n |-- genero: string (nullable \u003d true)\n |-- nivel_de_instruccion: string (nullable \u003d true)\n |-- condicion: string (nullable \u003d true)\n |-- movilizacion: string (nullable \u003d true)\n |-- tipo_arma: string (nullable \u003d true)\n |-- arma: string (nullable \u003d true)\n |-- tipo_lugar: string (nullable \u003d true)\n |-- codigo_provincia: string (nullable \u003d true)\n |-- codigo_canton: short (nullable \u003d true)\n |-- codigo_parroquia: integer (nullable \u003d true)\n |-- presunta_modalidad: string (nullable \u003d true)\n |-- codigo_canton_2: string (nullable \u003d true)\n |-- codigo_provincia_2: string (nullable \u003d true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721859937228_2143471607",
+      "id": "paragraph_1721859937228_2143471607",
+      "dateCreated": "2024-07-24 22:25:37.228",
+      "dateStarted": "2024-07-25 00:01:12.774",
+      "dateFinished": "2024-07-25 00:01:12.866",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\n# Genero y Tipo de Arma",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:12.873",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eGenero y Tipo de Arma\u003c/h1\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865131849_614465766",
+      "id": "paragraph_1721865131849_614465766",
+      "dateCreated": "2024-07-24 23:52:11.850",
+      "dateStarted": "2024-07-25 00:01:12.876",
+      "dateFinished": "2024-07-25 00:01:12.883",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfDetenidos.select(\"tipo_arma\").distinct.show(4)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:12.976",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+\n|           tipo_arma|\n+--------------------+\n|             NINGUNA|\n|      ARMAS DE FUEGO|\n|ARMAS BLANCAS (OB...|\n|                NULL|\n+--------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d127"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d128"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860033992_535434718",
+      "id": "paragraph_1721860033992_535434718",
+      "dateCreated": "2024-07-24 22:27:13.992",
+      "dateStarted": "2024-07-25 00:01:12.981",
+      "dateFinished": "2024-07-25 00:01:13.166",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val dfChiSquare \u003d     dfDetenidos\n        .where($\"genero\" \u003d!\u003d \"NO APLICA\"\n            \u0026\u0026 $\"tipo_arma\".isNotNull\n            \u0026\u0026 $\"tipo_arma\" \u003d!\u003d \"NINGUNA\")\n        .groupBy(\"tipo_arma\", \"genero\")\n//        .pivot(\"genero\")\n        .count\n        .na\n        .fill(0)\n        .orderBy(\"tipo_arma\")",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:10:53.046",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdfChiSquare\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [tipo_arma: string, genero: string ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721859895696_2030218102",
+      "id": "paragraph_1721859895696_2030218102",
+      "dateCreated": "2024-07-24 22:24:55.696",
+      "dateStarted": "2024-07-25 00:10:53.049",
+      "dateFinished": "2024-07-25 00:10:53.155",
+      "status": "FINISHED"
+    },
+    {
+      "text": "z.show(dfChiSquare)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:10:55.229",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "tipo_arma": "string",
+                      "genero": "string",
+                      "count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "tipo_arma\tgenero\tcount\nARMAS BLANCAS (OBJETO CORTANTE O PUNZANTE)\tMASCULINO\t2285\nARMAS BLANCAS (OBJETO CORTANTE O PUNZANTE)\tFEMENINO\t183\nARMAS BLANCAS (OBJETO CORTANTE O PUNZANTE)\tTRANS FEMENINA\t2\nARMAS DE FUEGO\tTRANS MASCULINO\t3\nARMAS DE FUEGO\tFEMENINO\t277\nARMAS DE FUEGO\tTRANSEXUAL\t1\nARMAS DE FUEGO\tMASCULINO\t6293\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d236"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d237"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860121103_1582187697",
+      "id": "paragraph_1721860121103_1582187697",
+      "dateCreated": "2024-07-24 22:28:41.103",
+      "dateStarted": "2024-07-25 00:10:55.232",
+      "dateFinished": "2024-07-25 00:10:55.487",
+      "status": "FINISHED"
+    },
+    {
+      "text": "import org.apache.spark.ml.feature.StringIndexer\nimport org.apache.spark.ml.linalg.{Vector, Vectors}\nimport org.apache.spark.sql.Row\nimport org.apache.spark.ml.stat.ChiSquareTest",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:13.793",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.ml.feature.StringIndexer\nimport org.apache.spark.ml.linalg.{Vector, Vectors}\nimport org.apache.spark.sql.Row\nimport org.apache.spark.ml.stat.ChiSquareTest\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860153630_590325866",
+      "id": "paragraph_1721860153630_590325866",
+      "dateCreated": "2024-07-24 22:29:13.630",
+      "dateStarted": "2024-07-25 00:01:13.797",
+      "dateFinished": "2024-07-25 00:01:13.885",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val tipArmaIndexer \u003d new StringIndexer().setInputCol(\"tipo_arma\").setOutputCol(\"tipo_arma_index\").fit(dfChiSquare)\nval generoIndexer \u003d new StringIndexer().setInputCol(\"genero\").setOutputCol(\"genero_index\").fit(dfChiSquare)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:10:59.635",
+      "progress": 33,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mtipArmaIndexer\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexerModel\u001b[0m \u003d StringIndexerModel: uid\u003dstrIdx_27bb5b91973e, handleInvalid\u003derror\n\u001b[1m\u001b[34mgeneroIndexer\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexerModel\u001b[0m \u003d StringIndexerModel: uid\u003dstrIdx_0555f801c900, handleInvalid\u003derror\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d238"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d239"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d240"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d241"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d242"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d243"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d244"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d245"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d246"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d247"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860250415_1636465280",
+      "id": "paragraph_1721860250415_1636465280",
+      "dateCreated": "2024-07-24 22:30:50.416",
+      "dateStarted": "2024-07-25 00:10:59.638",
+      "dateFinished": "2024-07-25 00:11:00.227",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val indexedData \u003d tipArmaIndexer\n    .transform(dfChiSquare)\n    .transform(generoIndexer.transform(_))",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:11:01.548",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mindexedData\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [tipo_arma: string, genero: string ... 3 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860306237_1607727562",
+      "id": "paragraph_1721860306237_1607727562",
+      "dateCreated": "2024-07-24 22:31:46.237",
+      "dateStarted": "2024-07-25 00:11:01.551",
+      "dateFinished": "2024-07-25 00:11:01.642",
+      "status": "FINISHED"
+    },
+    {
+      "text": "indexedData.show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:11:03.724",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+---------------+-----+---------------+------------+\n|           tipo_arma|         genero|count|tipo_arma_index|genero_index|\n+--------------------+---------------+-----+---------------+------------+\n|ARMAS BLANCAS (OB...|      MASCULINO| 2285|            1.0|         1.0|\n|ARMAS BLANCAS (OB...|       FEMENINO|  183|            1.0|         0.0|\n|ARMAS BLANCAS (OB...| TRANS FEMENINA|    2|            1.0|         2.0|\n|      ARMAS DE FUEGO|TRANS MASCULINO|    3|            0.0|         3.0|\n|      ARMAS DE FUEGO|       FEMENINO|  277|            0.0|         0.0|\n|      ARMAS DE FUEGO|     TRANSEXUAL|    1|            0.0|         4.0|\n|      ARMAS DE FUEGO|      MASCULINO| 6293|            0.0|         1.0|\n+--------------------+---------------+-----+---------------+------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d248"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d249"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d250"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d251"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860364092_1220269684",
+      "id": "paragraph_1721860364092_1220269684",
+      "dateCreated": "2024-07-24 22:32:44.092",
+      "dateStarted": "2024-07-25 00:11:03.727",
+      "dateFinished": "2024-07-25 00:11:03.964",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val vectorData \u003d indexedData.map { case Row(m, g, c: Long, mi:Double, gi:Double)  \u003d\u003e\n  (Vectors.dense(mi, gi), c.toDouble)\n}.toDF(\"features\", \"label\")",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:11:05.543",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mvectorData\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [features: vector, label: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860367764_2147197936",
+      "id": "paragraph_1721860367764_2147197936",
+      "dateCreated": "2024-07-24 22:32:47.764",
+      "dateStarted": "2024-07-25 00:11:05.546",
+      "dateFinished": "2024-07-25 00:11:05.680",
+      "status": "FINISHED"
+    },
+    {
+      "text": "vectorData.show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:11:07.395",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------+------+\n| features| label|\n+---------+------+\n|[1.0,1.0]|2285.0|\n|[1.0,0.0]| 183.0|\n|[1.0,2.0]|   2.0|\n|[0.0,3.0]|   3.0|\n|[0.0,0.0]| 277.0|\n|[0.0,4.0]|   1.0|\n|[0.0,1.0]|6293.0|\n+---------+------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d252"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d253"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d254"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d255"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860389561_515852868",
+      "id": "paragraph_1721860389561_515852868",
+      "dateCreated": "2024-07-24 22:33:09.561",
+      "dateStarted": "2024-07-25 00:11:07.400",
+      "dateFinished": "2024-07-25 00:11:07.868",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val chiSquareTestResult \u003d ChiSquareTest.test(vectorData, \"features\", \"label\").head",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:11:10.156",
+      "progress": 20,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mchiSquareTestResult\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Row\u001b[0m \u003d [[0.32084719886213475,0.26003992245943464],WrappedArray(6, 24),[6.999999999999999,27.99999999999999]]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d256"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d257"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d258"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d259"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d260"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d261"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860397803_1628544207",
+      "id": "paragraph_1721860397803_1628544207",
+      "dateCreated": "2024-07-24 22:33:17.803",
+      "dateStarted": "2024-07-25 00:11:10.160",
+      "dateFinished": "2024-07-25 00:11:10.623",
+      "status": "FINISHED"
+    },
+    {
+      "text": "println(s\"P-values: ${chiSquareTestResult(0)}\")\nprintln(s\"Degrees of freedom: ${chiSquareTestResult(1)}\")\nprintln(s\"Statistics: ${chiSquareTestResult(2)}\")",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:11:12.467",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "P-values: [0.32084719886213475,0.26003992245943464]\nDegrees of freedom: WrappedArray(6, 24)\nStatistics: [6.999999999999999,27.99999999999999]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860413638_1059080182",
+      "id": "paragraph_1721860413638_1059080182",
+      "dateCreated": "2024-07-24 22:33:33.638",
+      "dateStarted": "2024-07-25 00:11:12.472",
+      "dateFinished": "2024-07-25 00:11:12.546",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\n## Ambos valores de p_values, son superiores a 0.05, esto signfica que las variables genero y tipo de arma tienen una relación débil.",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:16.630",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eAmbos valores de p_values, son superiores a 0.05, esto signfica que las variables genero y tipo de arma tienen una relación débil.\u003c/h2\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860424506_1758550192",
+      "id": "paragraph_1721860424506_1758550192",
+      "dateCreated": "2024-07-24 22:33:44.507",
+      "dateStarted": "2024-07-25 00:01:16.633",
+      "dateFinished": "2024-07-25 00:01:16.639",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\n# Autoidentificacion Etnica y Nivel de Instruccion",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:16.733",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eAutoidentificacion Etnica y Nivel de Instruccion\u003c/h1\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865104376_619690653",
+      "id": "paragraph_1721865104376_619690653",
+      "dateCreated": "2024-07-24 23:51:44.376",
+      "dateStarted": "2024-07-25 00:01:16.738",
+      "dateFinished": "2024-07-25 00:01:16.745",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfDetenidos.select(\"autoidentificacion_etnica\").distinct.show(40)\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:16.838",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------------------+\n|autoidentificacion_etnica|\n+-------------------------+\n|                NATABUELA|\n|                    ANDOA|\n|                 SARAGURO|\n|                    SHUAR|\n|     AFROECUATORIANO/A...|\n|                    PASTO|\n|                  SHIWIAR|\n|                   ACHUAR|\n|                 SIN DATO|\n|                    EPERA|\n|                 INDÍGENA|\n|                  WARANKA|\n|                   PURUHÁ|\n|                    MANTA|\n|                  NEGRO/A|\n|                 CHIBULEO|\n|                   KAÑARI|\n|                 SALASACA|\n|                    COFÁN|\n|               MONTUBIO/A|\n|              QUISAPINCHA|\n|                   PALTAS|\n|                    SIONA|\n|                 MULATO/A|\n|                 BLANCO/A|\n|                   KICHWA|\n|                  KAYAMBI|\n|                  KARANKI|\n|                KITU KARA|\n|                   SECOYA|\n|                 TSÁCHILA|\n|                  WAORANI|\n|                 TOMABELA|\n|                MESTIZO/A|\n|                  OTAVALO|\n|                   CHACHI|\n|             SE DESCONOCE|\n|                 PANZALEO|\n|                   ZÁPARA|\n|                     NULL|\n+-------------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d155"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d156"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721864322894_772264117",
+      "id": "paragraph_1721864322894_772264117",
+      "dateCreated": "2024-07-24 23:38:42.894",
+      "dateStarted": "2024-07-25 00:01:16.843",
+      "dateFinished": "2024-07-25 00:01:17.052",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfDetenidos.select(\"nivel_de_instruccion\").distinct.show\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:17.143",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+\n|nivel_de_instruccion|\n+--------------------+\n|CUARTO NIVEL O DE...|\n|            SIN DATO|\n|EDUCACIÓN GENERAL...|\n|   EDUCACIÓN INICIAL|\n|        BACHILLERATO|\n|TERCER NIVEL TÉCN...|\n|           NO APLICA|\n|                NULL|\n+--------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d157"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d158"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721863847653_1023374765",
+      "id": "paragraph_1721863847653_1023374765",
+      "dateCreated": "2024-07-24 23:30:47.653",
+      "dateStarted": "2024-07-25 00:01:17.148",
+      "dateFinished": "2024-07-25 00:01:17.419",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val dfChiSquare2 \u003d dfDetenidos\n        .where($\"autoidentificacion_etnica\".isNotNull\n            \u0026\u0026 $\"autoidentificacion_etnica\" \u003d!\u003d \"SIN DATO\"\n            \u0026\u0026 $\"autoidentificacion_etnica\" \u003d!\u003d \"SE DESCONOCE\"\n            \u0026\u0026 $\"nivel_de_instruccion\" \u003d!\u003d \"NO APLICA\"\n            \u0026\u0026 $\"nivel_de_instruccion\".isNotNull)\n        .groupBy(\"autoidentificacion_etnica\", \"nivel_de_instruccion\")\n//        .pivot(\"genero\")\n        .count\n        .na\n        .fill(0)\n        .orderBy(\"nivel_de_instruccion\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:17.448",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdfChiSquare2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [autoidentificacion_etnica: string, nivel_de_instruccion: string ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721863795032_638719560",
+      "id": "paragraph_1721863795032_638719560",
+      "dateCreated": "2024-07-24 23:29:55.033",
+      "dateStarted": "2024-07-25 00:01:17.455",
+      "dateFinished": "2024-07-25 00:01:17.617",
+      "status": "FINISHED"
+    },
+    {
+      "text": "z.show(dfChiSquare2)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:17.655",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "autoidentificacion_etnica": "string",
+                      "nivel_de_instruccion": "string",
+                      "count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "autoidentificacion_etnica\tnivel_de_instruccion\tcount\nCHIBULEO\tBACHILLERATO\t1\nBLANCO/A\tBACHILLERATO\t141\nSECOYA\tBACHILLERATO\t1\nCOFÁN\tBACHILLERATO\t2\nAFROECUATORIANO/A  AFRODESCENDIENTE\tBACHILLERATO\t474\nSALASACA\tBACHILLERATO\t3\nMULATO/A\tBACHILLERATO\t86\nINDÍGENA\tBACHILLERATO\t357\nSIONA\tBACHILLERATO\t1\nWAORANI\tBACHILLERATO\t2\nSARAGURO\tBACHILLERATO\t2\nKICHWA\tBACHILLERATO\t105\nACHUAR\tBACHILLERATO\t3\nMONTUBIO/A\tBACHILLERATO\t224\nSHUAR\tBACHILLERATO\t104\nTSÁCHILA\tBACHILLERATO\t1\nSHIWIAR\tBACHILLERATO\t1\nMESTIZO/A\tBACHILLERATO\t13168\nEPERA\tBACHILLERATO\t2\nOTAVALO\tBACHILLERATO\t4\nMANTA\tBACHILLERATO\t16\nNEGRO/A\tBACHILLERATO\t57\nKITU KARA\tBACHILLERATO\t2\nINDÍGENA\tCUARTO NIVEL O DE POSGRADO\t13\nMESTIZO/A\tCUARTO NIVEL O DE POSGRADO\t532\nMANTA\tCUARTO NIVEL O DE POSGRADO\t2\nMONTUBIO/A\tCUARTO NIVEL O DE POSGRADO\t4\nAFROECUATORIANO/A  AFRODESCENDIENTE\tCUARTO NIVEL O DE POSGRADO\t6\nOTAVALO\tCUARTO NIVEL O DE POSGRADO\t1\nBLANCO/A\tCUARTO NIVEL O DE POSGRADO\t11\nNEGRO/A\tCUARTO NIVEL O DE POSGRADO\t3\nMULATO/A\tCUARTO NIVEL O DE POSGRADO\t2\nSHUAR\tCUARTO NIVEL O DE POSGRADO\t1\nQUISAPINCHA\tEDUCACIÓN GENERAL BÁSICA\t1\nNEGRO/A\tEDUCACIÓN GENERAL BÁSICA\t42\nEPERA\tEDUCACIÓN GENERAL BÁSICA\t1\nSALASACA\tEDUCACIÓN GENERAL BÁSICA\t2\nOTAVALO\tEDUCACIÓN GENERAL BÁSICA\t1\nSARAGURO\tEDUCACIÓN GENERAL BÁSICA\t1\nKICHWA\tEDUCACIÓN GENERAL BÁSICA\t53\nMANTA\tEDUCACIÓN GENERAL BÁSICA\t1\nMONTUBIO/A\tEDUCACIÓN GENERAL BÁSICA\t97\nINDÍGENA\tEDUCACIÓN GENERAL BÁSICA\t267\nBLANCO/A\tEDUCACIÓN GENERAL BÁSICA\t24\nAFROECUATORIANO/A  AFRODESCENDIENTE\tEDUCACIÓN GENERAL BÁSICA\t349\nACHUAR\tEDUCACIÓN GENERAL BÁSICA\t4\nSHUAR\tEDUCACIÓN GENERAL BÁSICA\t81\nMESTIZO/A\tEDUCACIÓN GENERAL BÁSICA\t4508\nMULATO/A\tEDUCACIÓN GENERAL BÁSICA\t30\nKITU KARA\tEDUCACIÓN INICIAL\t1\nBLANCO/A\tEDUCACIÓN INICIAL\t10\nMONTUBIO/A\tEDUCACIÓN INICIAL\t35\nSALASACA\tEDUCACIÓN INICIAL\t1\nSECOYA\tEDUCACIÓN INICIAL\t1\nMESTIZO/A\tEDUCACIÓN INICIAL\t906\nMULATO/A\tEDUCACIÓN INICIAL\t9\nINDÍGENA\tEDUCACIÓN INICIAL\t64\nKICHWA\tEDUCACIÓN INICIAL\t8\nOTAVALO\tEDUCACIÓN INICIAL\t1\nSHUAR\tEDUCACIÓN INICIAL\t19\nAFROECUATORIANO/A  AFRODESCENDIENTE\tEDUCACIÓN INICIAL\t65\nNEGRO/A\tEDUCACIÓN INICIAL\t8\nPURUHÁ\tSIN DATO\t1\nWAORANI\tSIN DATO\t2\nCOFÁN\tSIN DATO\t2\nMONTUBIO/A\tSIN DATO\t430\nSARAGURO\tSIN DATO\t2\nMESTIZO/A\tSIN DATO\t22768\nSHIWIAR\tSIN DATO\t1\nSECOYA\tSIN DATO\t2\nWARANKA\tSIN DATO\t1\nEPERA\tSIN DATO\t4\nKITU KARA\tSIN DATO\t2\nANDOA\tSIN DATO\t1\nQUISAPINCHA\tSIN DATO\t2\nMULATO/A\tSIN DATO\t139\nPASTO\tSIN DATO\t1\nAFROECUATORIANO/A  AFRODESCENDIENTE\tSIN DATO\t1464\nKAYAMBI\tSIN DATO\t3\nKAÑARI\tSIN DATO\t1\nSALASACA\tSIN DATO\t4\nKARANKI\tSIN DATO\t1\nINDÍGENA\tSIN DATO\t274\nACHUAR\tSIN DATO\t7\nNATABUELA\tSIN DATO\t1\nNEGRO/A\tSIN DATO\t191\nMANTA\tSIN DATO\t27\nKICHWA\tSIN DATO\t108\nSHUAR\tSIN DATO\t125\nCHIBULEO\tSIN DATO\t1\nBLANCO/A\tSIN DATO\t108\nTSÁCHILA\tSIN DATO\t1\nNEGRO/A\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t1\nINDÍGENA\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t43\nMESTIZO/A\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t1533\nWAORANI\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t1\nAFROECUATORIANO/A  AFRODESCENDIENTE\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t23\nBLANCO/A\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t22\nACHUAR\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t1\nMULATO/A\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t5\nSHUAR\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t9\nMONTUBIO/A\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t10\nKICHWA\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t8\nMANTA\tTERCER NIVEL TÉCNICO-TECNOLÓGICO Y DE GRADO\t3\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d159"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d160"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721864119424_2024184",
+      "id": "paragraph_1721864119424_2024184",
+      "dateCreated": "2024-07-24 23:35:19.424",
+      "dateStarted": "2024-07-25 00:01:17.660",
+      "dateFinished": "2024-07-25 00:01:17.907",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val autoEtnicaIndexer \u003d new StringIndexer().setInputCol(\"autoidentificacion_etnica\").setOutputCol(\"autoidentificacion_etnica_index\").fit(dfChiSquare2)\nval nivelInstrucIndexer \u003d new StringIndexer().setInputCol(\"nivel_de_instruccion\").setOutputCol(\"nivel_de_instruccion_index\").fit(dfChiSquare2)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:17.960",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mautoEtnicaIndexer\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexerModel\u001b[0m \u003d StringIndexerModel: uid\u003dstrIdx_18eb19d08931, handleInvalid\u003derror\n\u001b[1m\u001b[34mnivelInstrucIndexer\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexerModel\u001b[0m \u003d StringIndexerModel: uid\u003dstrIdx_0ec37883c750, handleInvalid\u003derror\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d161"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d162"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d163"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d164"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d165"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d166"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d167"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d168"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d169"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d170"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721864452694_419248571",
+      "id": "paragraph_1721864452694_419248571",
+      "dateCreated": "2024-07-24 23:40:52.694",
+      "dateStarted": "2024-07-25 00:01:17.964",
+      "dateFinished": "2024-07-25 00:01:18.814",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val indexedData2 \u003d autoEtnicaIndexer\n    .transform(dfChiSquare2)\n    .transform(nivelInstrucIndexer.transform(_))",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:18.865",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mindexedData2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [autoidentificacion_etnica: string, nivel_de_instruccion: string ... 3 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721864797829_776143505",
+      "id": "paragraph_1721864797829_776143505",
+      "dateCreated": "2024-07-24 23:46:37.829",
+      "dateStarted": "2024-07-25 00:01:18.870",
+      "dateFinished": "2024-07-25 00:01:19.048",
+      "status": "FINISHED"
+    },
+    {
+      "text": "indexedData.show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:19.070",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+---------------+-----+---------------+------------+\n|           tipo_arma|         genero|count|tipo_arma_index|genero_index|\n+--------------------+---------------+-----+---------------+------------+\n|ARMAS BLANCAS (OB...|      MASCULINO| 2285|            1.0|         1.0|\n|ARMAS BLANCAS (OB...|       FEMENINO|  183|            1.0|         0.0|\n|ARMAS BLANCAS (OB...| TRANS FEMENINA|    2|            1.0|         2.0|\n|      ARMAS DE FUEGO|TRANS MASCULINO|    3|            0.0|         3.0|\n|      ARMAS DE FUEGO|       FEMENINO|  277|            0.0|         0.0|\n|      ARMAS DE FUEGO|     TRANSEXUAL|    1|            0.0|         4.0|\n|      ARMAS DE FUEGO|      MASCULINO| 6293|            0.0|         1.0|\n+--------------------+---------------+-----+---------------+------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d171"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d172"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d173"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d174"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721864806863_1286984534",
+      "id": "paragraph_1721864806863_1286984534",
+      "dateCreated": "2024-07-24 23:46:46.863",
+      "dateStarted": "2024-07-25 00:01:19.081",
+      "dateFinished": "2024-07-25 00:01:19.357",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val vectorData2 \u003d indexedData2.map { case Row(m, g, c: Long, mi:Double, gi:Double)  \u003d\u003e\n  (Vectors.dense(mi, gi), c.toDouble)\n}.toDF(\"features\", \"label\")",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:19.382",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mvectorData2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [features: vector, label: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721864824933_203959599",
+      "id": "paragraph_1721864824933_203959599",
+      "dateCreated": "2024-07-24 23:47:04.933",
+      "dateStarted": "2024-07-25 00:01:19.387",
+      "dateFinished": "2024-07-25 00:01:19.557",
+      "status": "FINISHED"
+    },
+    {
+      "text": "vectorData2.show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:19.587",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+-------+\n|  features|  label|\n+----------+-------+\n|[18.0,1.0]|    1.0|\n| [1.0,1.0]|  141.0|\n|[16.0,1.0]|    1.0|\n|[19.0,1.0]|    2.0|\n| [0.0,1.0]|  474.0|\n|[12.0,1.0]|    3.0|\n| [5.0,1.0]|   86.0|\n| [2.0,1.0]|  357.0|\n|[30.0,1.0]|    1.0|\n|[17.0,1.0]|    2.0|\n|[15.0,1.0]|    2.0|\n| [8.0,1.0]|  105.0|\n|[10.0,1.0]|    3.0|\n| [4.0,1.0]|  224.0|\n| [7.0,1.0]|  104.0|\n|[22.0,1.0]|    1.0|\n|[21.0,1.0]|    1.0|\n| [3.0,1.0]|13168.0|\n|[13.0,1.0]|    2.0|\n|[11.0,1.0]|    4.0|\n+----------+-------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d175"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d176"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d177"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d178"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721864968205_428750839",
+      "id": "paragraph_1721864968205_428750839",
+      "dateCreated": "2024-07-24 23:49:28.206",
+      "dateStarted": "2024-07-25 00:01:19.590",
+      "dateFinished": "2024-07-25 00:01:19.908",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val chiSquareTestResult2 \u003d ChiSquareTest.test(vectorData2, \"features\", \"label\").head",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:19.991",
+      "progress": 20,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mchiSquareTestResult2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Row\u001b[0m \u003d [[1.0,0.2631646410664825],WrappedArray(1519, 245),[929.7614230979561,258.6060067585254]]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d179"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d180"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d181"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d182"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d183"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d184"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721864835835_1933254925",
+      "id": "paragraph_1721864835835_1933254925",
+      "dateCreated": "2024-07-24 23:47:15.836",
+      "dateStarted": "2024-07-25 00:01:19.995",
+      "dateFinished": "2024-07-25 00:01:20.452",
+      "status": "FINISHED"
+    },
+    {
+      "text": "println(s\"P-values: ${chiSquareTestResult2(0)}\")\nprintln(s\"Degrees of freedom: ${chiSquareTestResult2(1)}\")\nprintln(s\"Statistics: ${chiSquareTestResult2(2)}\")",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:20.495",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "P-values: [1.0,0.2631646410664825]\nDegrees of freedom: WrappedArray(1519, 245)\nStatistics: [929.7614230979561,258.6060067585254]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721864997968_1361553946",
+      "id": "paragraph_1721864997968_1361553946",
+      "dateCreated": "2024-07-24 23:49:57.969",
+      "dateStarted": "2024-07-25 00:01:20.500",
+      "dateFinished": "2024-07-25 00:01:20.642",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\n## Ambos valores de p_values, son superiores a 0.05, esto signfica que las variables autoidentificacion_etnica y nivel_de_instruccion tienen una relación débil.",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:09:31.233",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eAmbos valores de p_values, son superiores a 0.05, esto signfica que las variables autoidentificacion_etnica y nivel_de_instruccion tienen una relación débil.\u003c/h2\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865026576_985017976",
+      "id": "paragraph_1721865026576_985017976",
+      "dateCreated": "2024-07-24 23:50:26.576",
+      "dateStarted": "2024-07-25 00:09:31.233",
+      "dateFinished": "2024-07-25 00:09:31.239",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\n# Tipo y Genero",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:11:44.219",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eTipo y Genero\u003c/h1\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865154778_972095189",
+      "id": "paragraph_1721865154778_972095189",
+      "dateCreated": "2024-07-24 23:52:34.778",
+      "dateStarted": "2024-07-25 00:11:44.222",
+      "dateFinished": "2024-07-25 00:11:44.228",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfDetenidos.select(\"tipo\").distinct.show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:20.908",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------+\n|       tipo|\n+-----------+\n|   DETENIDO|\n|APREHENDIDO|\n|       NULL|\n+-----------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d185"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d186"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865189436_233111600",
+      "id": "paragraph_1721865189436_233111600",
+      "dateCreated": "2024-07-24 23:53:09.436",
+      "dateStarted": "2024-07-25 00:01:20.912",
+      "dateFinished": "2024-07-25 00:01:21.090",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfDetenidos.select(\"genero\").distinct.show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:21.112",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------------+\n|         genero|\n+---------------+\n|TRANS MASCULINO|\n|       FEMENINO|\n|     TRANSEXUAL|\n|      MASCULINO|\n|     NO BINARIO|\n| TRANS FEMENINA|\n|      NO APLICA|\n|           NULL|\n+---------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d187"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d188"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865262640_193867014",
+      "id": "paragraph_1721865262640_193867014",
+      "dateCreated": "2024-07-24 23:54:22.640",
+      "dateStarted": "2024-07-25 00:01:21.115",
+      "dateFinished": "2024-07-25 00:01:21.358",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val dfChiSquare3 \u003d     dfDetenidos\n        .where($\"genero\" \u003d!\u003d \"NO APLICA\" \u0026\u0026 $\"genero\".isNotNull\n            \u0026\u0026 $\"tipo\".isNotNull)\n        .groupBy(\"tipo\", \"genero\")\n//        .pivot(\"genero\")\n        .count\n        .na\n        .fill(0)\n        .orderBy(\"tipo\")",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:21.423",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdfChiSquare3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [tipo: string, genero: string ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865296296_1432350556",
+      "id": "paragraph_1721865296296_1432350556",
+      "dateCreated": "2024-07-24 23:54:56.296",
+      "dateStarted": "2024-07-25 00:01:21.428",
+      "dateFinished": "2024-07-25 00:01:21.548",
+      "status": "FINISHED"
+    },
+    {
+      "text": "z.show(dfChiSquare3)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:21.627",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "tipo": "string",
+                      "genero": "string",
+                      "count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "tipo\tgenero\tcount\nAPREHENDIDO\tTRANSEXUAL\t19\nAPREHENDIDO\tFEMENINO\t6275\nAPREHENDIDO\tTRANS FEMENINA\t23\nAPREHENDIDO\tNO BINARIO\t8\nAPREHENDIDO\tTRANS MASCULINO\t35\nAPREHENDIDO\tMASCULINO\t51577\nDETENIDO\tTRANSEXUAL\t8\nDETENIDO\tFEMENINO\t1869\nDETENIDO\tNO BINARIO\t2\nDETENIDO\tMASCULINO\t18262\nDETENIDO\tTRANS MASCULINO\t15\nDETENIDO\tTRANS FEMENINA\t2\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d189"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d190"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865378735_1475549703",
+      "id": "paragraph_1721865378735_1475549703",
+      "dateCreated": "2024-07-24 23:56:18.735",
+      "dateStarted": "2024-07-25 00:01:21.631",
+      "dateFinished": "2024-07-25 00:01:21.893",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val tipoIndexer \u003d new StringIndexer().setInputCol(\"tipo\").setOutputCol(\"tipo_arma_index\").fit(dfChiSquare3)\nval generoIndexer \u003d new StringIndexer().setInputCol(\"genero\").setOutputCol(\"genero_index\").fit(dfChiSquare3)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:21.932",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mtipoIndexer\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexerModel\u001b[0m \u003d StringIndexerModel: uid\u003dstrIdx_527e5649c852, handleInvalid\u003derror\n\u001b[1m\u001b[34mgeneroIndexer\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexerModel\u001b[0m \u003d StringIndexerModel: uid\u003dstrIdx_9dc5f27d15ac, handleInvalid\u003derror\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d191"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d192"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d193"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d194"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d195"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d196"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d197"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d198"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d199"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d200"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865386855_395511108",
+      "id": "paragraph_1721865386855_395511108",
+      "dateCreated": "2024-07-24 23:56:26.856",
+      "dateStarted": "2024-07-25 00:01:21.939",
+      "dateFinished": "2024-07-25 00:01:22.576",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val indexedData3 \u003d tipoIndexer\n    .transform(dfChiSquare3)\n    .transform(generoIndexer.transform(_))",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:22.638",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mindexedData3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [tipo: string, genero: string ... 3 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865421995_842618415",
+      "id": "paragraph_1721865421995_842618415",
+      "dateCreated": "2024-07-24 23:57:01.996",
+      "dateStarted": "2024-07-25 00:01:22.642",
+      "dateFinished": "2024-07-25 00:01:22.785",
+      "status": "FINISHED"
+    },
+    {
+      "text": "indexedData3.show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:22.842",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------+---------------+-----+---------------+------------+\n|       tipo|         genero|count|tipo_arma_index|genero_index|\n+-----------+---------------+-----+---------------+------------+\n|APREHENDIDO|     TRANSEXUAL|   19|            0.0|         5.0|\n|APREHENDIDO|       FEMENINO| 6275|            0.0|         0.0|\n|APREHENDIDO| TRANS FEMENINA|   23|            0.0|         3.0|\n|APREHENDIDO|     NO BINARIO|    8|            0.0|         2.0|\n|APREHENDIDO|TRANS MASCULINO|   35|            0.0|         4.0|\n|APREHENDIDO|      MASCULINO|51577|            0.0|         1.0|\n|   DETENIDO|     TRANSEXUAL|    8|            1.0|         5.0|\n|   DETENIDO|       FEMENINO| 1869|            1.0|         0.0|\n|   DETENIDO|     NO BINARIO|    2|            1.0|         2.0|\n|   DETENIDO|      MASCULINO|18262|            1.0|         1.0|\n|   DETENIDO|TRANS MASCULINO|   15|            1.0|         4.0|\n|   DETENIDO| TRANS FEMENINA|    2|            1.0|         3.0|\n+-----------+---------------+-----+---------------+------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d201"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d202"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d203"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d204"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865437657_2006775003",
+      "id": "paragraph_1721865437657_2006775003",
+      "dateCreated": "2024-07-24 23:57:17.657",
+      "dateStarted": "2024-07-25 00:01:22.846",
+      "dateFinished": "2024-07-25 00:01:23.324",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val vectorData3 \u003d indexedData3.map { case Row(m, g, c: Long, mi:Double, gi:Double)  \u003d\u003e\n  (Vectors.dense(mi, gi), c.toDouble)\n}.toDF(\"features\", \"label\")",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:23.346",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mvectorData3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m \u003d [features: vector, label: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865455105_910111795",
+      "id": "paragraph_1721865455105_910111795",
+      "dateCreated": "2024-07-24 23:57:35.105",
+      "dateStarted": "2024-07-25 00:01:23.351",
+      "dateFinished": "2024-07-25 00:01:23.677",
+      "status": "FINISHED"
+    },
+    {
+      "text": "vectorData3.show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:23.751",
+      "progress": 25,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------+-------+\n| features|  label|\n+---------+-------+\n|[0.0,5.0]|   19.0|\n|[0.0,0.0]| 6275.0|\n|[0.0,3.0]|   23.0|\n|[0.0,2.0]|    8.0|\n|[0.0,4.0]|   35.0|\n|[0.0,1.0]|51577.0|\n|[1.0,5.0]|    8.0|\n|[1.0,0.0]| 1869.0|\n|[1.0,2.0]|    2.0|\n|[1.0,1.0]|18262.0|\n|[1.0,4.0]|   15.0|\n|[1.0,3.0]|    2.0|\n+---------+-------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d205"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d206"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d207"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d208"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865470354_1211334112",
+      "id": "paragraph_1721865470354_1211334112",
+      "dateCreated": "2024-07-24 23:57:50.355",
+      "dateStarted": "2024-07-25 00:01:23.755",
+      "dateFinished": "2024-07-25 00:01:24.019",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val chiSquareTestResult3 \u003d ChiSquareTest.test(vectorData3, \"features\", \"label\").head",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:24.055",
+      "progress": 20,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mchiSquareTestResult3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Row\u001b[0m \u003d [[0.35048521232336194,0.3521852351899386],WrappedArray(9, 45),[10.0,47.99999999999997]]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d209"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d210"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d211"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d212"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d213"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d214"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865482386_100881374",
+      "id": "paragraph_1721865482386_100881374",
+      "dateCreated": "2024-07-24 23:58:02.386",
+      "dateStarted": "2024-07-25 00:01:24.059",
+      "dateFinished": "2024-07-25 00:01:24.438",
+      "status": "FINISHED"
+    },
+    {
+      "text": "println(s\"P-values: ${chiSquareTestResult3(0)}\")\nprintln(s\"Degrees of freedom: ${chiSquareTestResult3(1)}\")\nprintln(s\"Statistics: ${chiSquareTestResult3(2)}\")",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:24.459",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "P-values: [0.35048521232336194,0.3521852351899386]\nDegrees of freedom: WrappedArray(9, 45)\nStatistics: [10.0,47.99999999999997]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865497578_1512716982",
+      "id": "paragraph_1721865497578_1512716982",
+      "dateCreated": "2024-07-24 23:58:17.578",
+      "dateStarted": "2024-07-25 00:01:24.464",
+      "dateFinished": "2024-07-25 00:01:24.566",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\n## Ambos valores de p_values, son superiores a 0.05, esto signfica que las variables tipo y genero tienen una relación débil.",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:24.664",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eAmbos valores de p_values, son superiores a 0.05, esto signfica que las variables tipo y genero tienen una relación débil.\u003c/h2\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865524186_1439326723",
+      "id": "paragraph_1721865524186_1439326723",
+      "dateCreated": "2024-07-24 23:58:44.186",
+      "dateStarted": "2024-07-25 00:01:24.669",
+      "dateFinished": "2024-07-25 00:01:24.675",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\n# Outliers de numdetenciones con DESV",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:24.770",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eOutliers de numdetenciones con DESV\u003c/h1\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721861656348_1876407945",
+      "id": "paragraph_1721861656348_1876407945",
+      "dateCreated": "2024-07-24 22:54:16.348",
+      "dateStarted": "2024-07-25 00:01:24.779",
+      "dateFinished": "2024-07-25 00:01:24.785",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfDetenidos.select(\"numero_detenciones\").distinct.show(30)\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:24.878",
+      "progress": 33,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------------------+\n|numero_detenciones|\n+------------------+\n|                 1|\n|                 0|\n|                31|\n|                26|\n|                44|\n|                12|\n|                22|\n|                13|\n|                 6|\n|                16|\n|                 3|\n|                20|\n|                 5|\n|                19|\n|                41|\n|                 9|\n|                17|\n|                 4|\n|                 8|\n|                39|\n|                 7|\n|                10|\n|                29|\n|                21|\n|                11|\n|                14|\n|                 2|\n|                46|\n|                18|\n|              NULL|\n+------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d215"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d216"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721862749774_2058414895",
+      "id": "paragraph_1721862749774_2058414895",
+      "dateCreated": "2024-07-24 23:12:29.774",
+      "dateStarted": "2024-07-25 00:01:24.883",
+      "dateFinished": "2024-07-25 00:01:25.295",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfDetenidos.select(\"numero_detenciones\").summary().show\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:25.383",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+-------------------+\n|summary| numero_detenciones|\n+-------+-------------------+\n|  count|             159781|\n|   mean|0.04768401749895169|\n| stddev|  0.552295222647766|\n|    min|                  0|\n|    25%|                  0|\n|    50%|                  0|\n|    75%|                  0|\n|    max|                 46|\n+-------+-------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d217"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d218"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721861057789_1876995764",
+      "id": "paragraph_1721861057789_1876995764",
+      "dateCreated": "2024-07-24 22:44:17.789",
+      "dateStarted": "2024-07-25 00:01:25.387",
+      "dateFinished": "2024-07-25 00:01:25.897",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val dfNumDetenciones \u003d dfDetenidos.select(\"numero_detenciones\").where($\"numero_detenciones\".isNotNull)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:26.493",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdfNumDetenciones\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [numero_detenciones: tinyint]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721860889260_645684894",
+      "id": "paragraph_1721860889260_645684894",
+      "dateCreated": "2024-07-24 22:41:29.260",
+      "dateStarted": "2024-07-25 00:01:26.497",
+      "dateFinished": "2024-07-25 00:01:26.591",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val avg \u003d dfNumDetenciones.select(mean(\"numero_detenciones\")).first()(0).asInstanceOf[Double]",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:26.597",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mavg\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m \u003d 0.04768401749895169\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d221"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d222"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721861180734_928782648",
+      "id": "paragraph_1721861180734_928782648",
+      "dateCreated": "2024-07-24 22:46:20.734",
+      "dateStarted": "2024-07-25 00:01:26.605",
+      "dateFinished": "2024-07-25 00:01:26.872",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val stdDesv \u003d dfNumDetenciones.select(stddev(\"numero_detenciones\")).first()(0).asInstanceOf[Double]",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:26.905",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mstdDesv\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m \u003d 0.552295222647766\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d223"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d224"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721861207020_1612137542",
+      "id": "paragraph_1721861207020_1612137542",
+      "dateCreated": "2024-07-24 22:46:47.020",
+      "dateStarted": "2024-07-25 00:01:26.909",
+      "dateFinished": "2024-07-25 00:01:27.212",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val inferior \u003d avg - 3*stdDesv\nval superior \u003d avg + 3*stdDesv",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:27.309",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34minferior\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m \u003d -1.6092016504443463\n\u001b[1m\u001b[34msuperior\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m \u003d 1.7045696854422496\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721861305591_1701656787",
+      "id": "paragraph_1721861305591_1701656787",
+      "dateCreated": "2024-07-24 22:48:25.591",
+      "dateStarted": "2024-07-25 00:01:27.313",
+      "dateFinished": "2024-07-25 00:01:27.410",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val dataSinOutliersStdDev \u003d dfNumDetenciones.where($\"numero_detenciones\"\u003e inferior \u0026\u0026 $\"numero_detenciones\" \u003c superior)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:27.413",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdataSinOutliersStdDev\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [numero_detenciones: tinyint]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721861343430_1507662784",
+      "id": "paragraph_1721861343430_1507662784",
+      "dateCreated": "2024-07-24 22:49:03.430",
+      "dateStarted": "2024-07-25 00:01:27.417",
+      "dateFinished": "2024-07-25 00:01:27.528",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dataSinOutliersStdDev.select(\"numero_detenciones\").summary().show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:27.617",
+      "progress": 0,
+      "config": {
+        "colWidth": 6.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+-------------------+\n|summary| numero_detenciones|\n+-------+-------------------+\n|  count|             158278|\n|   mean|0.00912950631167945|\n| stddev| 0.0951115954032486|\n|    min|                  0|\n|    25%|                  0|\n|    50%|                  0|\n|    75%|                  0|\n|    max|                  1|\n+-------+-------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d225"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d226"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721861436231_117746553",
+      "id": "paragraph_1721861436231_117746553",
+      "dateCreated": "2024-07-24 22:50:36.231",
+      "dateStarted": "2024-07-25 00:01:27.626",
+      "dateFinished": "2024-07-25 00:01:28.076",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfDetenidos.select(\"numero_detenciones\").summary().show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:28.125",
+      "progress": 0,
+      "config": {
+        "colWidth": 6.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+-------------------+\n|summary| numero_detenciones|\n+-------+-------------------+\n|  count|             159781|\n|   mean|0.04768401749895169|\n| stddev|  0.552295222647766|\n|    min|                  0|\n|    25%|                  0|\n|    50%|                  0|\n|    75%|                  0|\n|    max|                 46|\n+-------+-------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d227"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d228"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865596971_1841167654",
+      "id": "paragraph_1721865596971_1841167654",
+      "dateCreated": "2024-07-24 23:59:56.971",
+      "dateStarted": "2024-07-25 00:01:28.130",
+      "dateFinished": "2024-07-25 00:01:28.354",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\n# Tukey",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:28.430",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eTukey\u003c/h1\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721861455082_695221111",
+      "id": "paragraph_1721861455082_695221111",
+      "dateCreated": "2024-07-24 22:50:55.082",
+      "dateStarted": "2024-07-25 00:01:28.435",
+      "dateFinished": "2024-07-25 00:01:28.439",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfDetenidos.select(\"numero_detenciones\").summary().show\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:28.535",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+-------------------+\n|summary| numero_detenciones|\n+-------+-------------------+\n|  count|             159781|\n|   mean|0.04768401749895169|\n| stddev|  0.552295222647766|\n|    min|                  0|\n|    25%|                  0|\n|    50%|                  0|\n|    75%|                  0|\n|    max|                 46|\n+-------+-------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d229"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d230"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721861829511_1805556784",
+      "id": "paragraph_1721861829511_1805556784",
+      "dateCreated": "2024-07-24 22:57:09.511",
+      "dateStarted": "2024-07-25 00:01:28.538",
+      "dateFinished": "2024-07-25 00:01:28.942",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val cuartiles \u003d dfNumDetenciones.stat.approxQuantile(\"numero_detenciones\", Array(0.25,0.75), 0.0)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:29.038",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mcuartiles\u001b[0m: \u001b[1m\u001b[32mArray[Double]\u001b[0m \u003d Array(0.0, 0.0)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d231"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721862970585_1456645027",
+      "id": "paragraph_1721862970585_1456645027",
+      "dateCreated": "2024-07-24 23:16:10.585",
+      "dateStarted": "2024-07-25 00:01:29.041",
+      "dateFinished": "2024-07-25 00:01:29.720",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val q1 \u003d cuartiles(0)\nval q3 \u003d cuartiles(1)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:29.742",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mq1\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m \u003d 0.0\n\u001b[1m\u001b[34mq3\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m \u003d 0.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721863108466_749918525",
+      "id": "paragraph_1721863108466_749918525",
+      "dateCreated": "2024-07-24 23:18:28.466",
+      "dateStarted": "2024-07-25 00:01:29.746",
+      "dateFinished": "2024-07-25 00:01:29.843",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val iqr \u003d q3 - q1",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:29.846",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34miqr\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m \u003d 0.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721863136408_932988628",
+      "id": "paragraph_1721863136408_932988628",
+      "dateCreated": "2024-07-24 23:18:56.409",
+      "dateStarted": "2024-07-25 00:01:29.946",
+      "dateFinished": "2024-07-25 00:01:30.045",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val inferiorIQR \u003d q1 - 1.5 * iqr\nval superiorIQR \u003d q3 + 1.5 * iqr\n",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:15:52.884",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34minferiorIQR\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m \u003d 0.0\n\u001b[1m\u001b[34msuperiorIQR\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m \u003d 0.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721863164045_1951909476",
+      "id": "paragraph_1721863164045_1951909476",
+      "dateCreated": "2024-07-24 23:19:24.045",
+      "dateStarted": "2024-07-25 00:15:52.888",
+      "dateFinished": "2024-07-25 00:15:53.007",
+      "status": "FINISHED"
+    },
+    {
+      "text": "val dataSinOutliersIQR \u003d dfNumDetenciones\n.where($\"numero_detenciones\" \u003e\u003d inferiorIQR \u0026\u0026 $\"numero_detenciones\" \u003c\u003d superiorIQR)",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:30.255",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdataSinOutliersIQR\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m \u003d [numero_detenciones: tinyint]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721863222356_491901678",
+      "id": "paragraph_1721863222356_491901678",
+      "dateCreated": "2024-07-24 23:20:22.356",
+      "dateStarted": "2024-07-25 00:01:30.260",
+      "dateFinished": "2024-07-25 00:01:30.369",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dataSinOutliersIQR.select(\"numero_detenciones\").summary().show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:30.460",
+      "progress": 0,
+      "config": {
+        "colWidth": 6.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+------------------+\n|summary|numero_detenciones|\n+-------+------------------+\n|  count|            156833|\n|   mean|               0.0|\n| stddev|               0.0|\n|    min|                 0|\n|    25%|                 0|\n|    50%|                 0|\n|    75%|                 0|\n|    max|                 0|\n+-------+------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d232"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d233"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721863292219_1440414010",
+      "id": "paragraph_1721863292219_1440414010",
+      "dateCreated": "2024-07-24 23:21:32.219",
+      "dateStarted": "2024-07-25 00:01:30.464",
+      "dateFinished": "2024-07-25 00:01:30.831",
+      "status": "FINISHED"
+    },
+    {
+      "text": "dfDetenidos.select(\"numero_detenciones\").summary().show",
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:30.864",
+      "progress": 0,
+      "config": {
+        "colWidth": 6.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+-------------------+\n|summary| numero_detenciones|\n+-------+-------------------+\n|  count|             159781|\n|   mean|0.04768401749895169|\n| stddev|  0.552295222647766|\n|    min|                  0|\n|    25%|                  0|\n|    50%|                  0|\n|    75%|                  0|\n|    max|                 46|\n+-------+-------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d234"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id\u003d235"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721863469477_617265657",
+      "id": "paragraph_1721863469477_617265657",
+      "dateCreated": "2024-07-24 23:24:29.477",
+      "dateStarted": "2024-07-25 00:01:30.868",
+      "dateFinished": "2024-07-25 00:01:31.215",
+      "status": "FINISHED"
+    },
+    {
+      "user": "anonymous",
+      "dateUpdated": "2024-07-25 00:01:31.269",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1721865651741_1075970428",
+      "id": "paragraph_1721865651741_1075970428",
+      "dateCreated": "2024-07-25 00:00:51.742",
+      "status": "FINISHED"
+    }
+  ],
+  "name": "prueba2",
+  "id": "2K3DG91M3",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.11.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {
+    "isRunning": false
+  }
+}
