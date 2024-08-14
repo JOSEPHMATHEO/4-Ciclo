@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="DisenioLogicoTrabajoGrupalBDA" id="E3494429-0CEB-4C49-5059-464BD43A925E" version="3.5">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 03:51:16 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E3494429-0CEB-4C49-5059-464BD43A925E</designId>
+</OSDM_Design>

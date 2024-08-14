@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="59CE7A4D-F4C9-95A9-FF3A-07422B60CFFC" name="asignaciones">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:41:19 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_Estudiantes" id="C555B2D0-8282-5F90-D3EC-6F1A3F123704">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:43:13 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ACDD1C0D-E912-8505-ECE1-CC15B1E560CD" referredColumn="FFFB5707-2AA3-B70A-7911-99FFA57260BF"/>
+</associations>
+</Column>
+<Column name="id_Rangos" id="D5B876CF-C3B5-6256-D9B2-0BE64B28F14E">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:43:21 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="62638A68-03B7-09EA-7161-79F1DB8F1AA2" referredColumn="8B2C0E86-AE23-6BC3-80A7-8EE5ADC9FA37"/>
+</associations>
+</Column>
+<Column name="fecha_Alcanzada" id="DF23551F-2F91-B474-5983-BD4558EAA679">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:42:13 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5319C081-C3EA-3CB7-3140-F28DDFB131DB" name="asignaciones_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:42:13 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5B876CF-C3B5-6256-D9B2-0BE64B28F14E"/>
+<colUsage columnID="C555B2D0-8282-5F90-D3EC-6F1A3F123704"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="867131E3-584F-4F31-FB6D-72100E8BA95C" name="asignaciones_estudiante_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:43:13 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C555B2D0-8282-5F90-D3EC-6F1A3F123704"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C0D15C32-FE16-BC39-B29B-85E244216A34" name="asignaciones_rangos_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:43:21 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5B876CF-C3B5-6256-D9B2-0BE64B28F14E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

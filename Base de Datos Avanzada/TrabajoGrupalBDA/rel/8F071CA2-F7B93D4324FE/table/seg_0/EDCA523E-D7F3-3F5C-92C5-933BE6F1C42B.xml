@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EDCA523E-D7F3-3F5C-92C5-933BE6F1C42B" name="Clases">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:20:17 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_Clase" id="8DAEEDCE-A7DA-7AE7-B4FB-A15D403E787D">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:24:18 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lugar" id="A63F6272-2B0B-903E-6BB4-D9968AFF3F91">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:24:18 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_Hora" id="39D0F37E-FD46-0E59-822F-7CA05F6AFDAA">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:24:18 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nivel" id="7F33FFBD-7F48-5A0B-4189-499FA96FF472">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:26:39 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4F914754-06C3-6A91-55D4-FFB78C0B9EBE" name="Clases_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:24:18 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8DAEEDCE-A7DA-7AE7-B4FB-A15D403E787D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

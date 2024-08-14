@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="15211FF3-FB96-D476-E718-2DB1F7E612CE" name="rangos" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="8F071CA2-4280-F65A-5CB4-F7B93D4324FE" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="76C172A4-D461-D85F-FBB1-2D2A0E7A0539" name="estudiante" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="8F071CA2-4280-F65A-5CB4-F7B93D4324FE" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="A976F92F-A3C0-8598-7FA3-312B2DD1FC43" name="instructores" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="8F071CA2-4280-F65A-5CB4-F7B93D4324FE" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="EDCA523E-D7F3-3F5C-92C5-933BE6F1C42B" name="Clases" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="8F071CA2-4280-F65A-5CB4-F7B93D4324FE" propertySourceId="" propertyTargetId=""/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

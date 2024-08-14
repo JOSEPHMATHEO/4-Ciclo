@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FCD0A528-6BD2-6228-D08F-AED6C5CBC386" containerWithKeyObject="8F356E30-E7CE-332C-81B8-194D6CF58B40" localFKIndex="60E7C496-D960-DEB4-B43A-BC35524CE6F9" name="requisitos_rangos_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 02:23:13 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<referredTableLongName>rangos</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>15211FF3-FB96-D476-E718-2DB1F7E612CE</referredTableID>
+<keyObject>CD98A4E5-A257-4D41-057A-1C713874E14F</keyObject>
+<referredKeyID>CD98A4E5-A257-4D41-057A-1C713874E14F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_Rango</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

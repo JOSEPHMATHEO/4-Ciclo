@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="453B3F7B-0EDC-9136-6227-9E7B93C200A3" name="impartidas">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:46:00 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_Instructores" id="ED09F798-646D-C469-431A-7E8CD34FA098">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:55:05 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C05ACD14-52B4-F530-F826-06CB66565432" referredColumn="41E4AFC3-ED77-455F-9F79-B688AEB254B8"/>
+</associations>
+</Column>
+<Column name="id_Clases" id="92216392-0740-51CA-5B95-80298E40051D">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:52:28 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="37EA6470-963B-F879-1E85-D2C308311C10" referredColumn="8DAEEDCE-A7DA-7AE7-B4FB-A15D403E787D"/>
+</associations>
+</Column>
+<Column name="funcion" id="AA01E171-10B8-F02E-859C-5E7355588B1B">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:52:09 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AE3DDD73-5BD8-B3A5-90A6-78462239ECC4" name="impartidas_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:52:09 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="92216392-0740-51CA-5B95-80298E40051D"/>
+<colUsage columnID="ED09F798-646D-C469-431A-7E8CD34FA098"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9CC002E3-436E-CAC9-DB70-FB2D0D0394AD" name="impartidas_instructores_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:52:20 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED09F798-646D-C469-431A-7E8CD34FA098"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="410023FB-0B9A-C467-54E8-A0B6284BC41B" name="impartidas_clases_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:52:28 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="92216392-0740-51CA-5B95-80298E40051D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

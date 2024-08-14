@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E84704D4-7E45-21BB-4BD1-254F045A8B18" name="asistencias">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:30:11 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_Estudiante" id="BF52F384-1837-E29B-75D8-A65513F2BFA9">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:35:06 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B8FEBF5E-3064-4418-3CF4-5B43094FD619" referredColumn="FFFB5707-2AA3-B70A-7911-99FFA57260BF"/>
+</associations>
+</Column>
+<Column name="id_Clases" id="C418A66D-2D42-801C-D424-6DB2E50FFA9C">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:36:49 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="07CF7F0B-FE4F-CE35-767B-44DB219BF145" referredColumn="8DAEEDCE-A7DA-7AE7-B4FB-A15D403E787D"/>
+</associations>
+</Column>
+<Column name="fecha_Asistencia" id="8E67C02B-3846-59FC-4F25-F772CA56BFD9">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:30:44 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BFB27977-F4DB-4E3B-A155-09C6634B45A5" name="asistencias_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:34:05 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF52F384-1837-E29B-75D8-A65513F2BFA9"/>
+<colUsage columnID="C418A66D-2D42-801C-D424-6DB2E50FFA9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F981D9A-021B-A302-3035-9A4946575B8E" name="asistencias_estudiante_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:35:06 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF52F384-1837-E29B-75D8-A65513F2BFA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E21239AE-077F-98B7-7E26-254C0EC3E2CB" name="asistencias_Clases_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:36:49 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C418A66D-2D42-801C-D424-6DB2E50FFA9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

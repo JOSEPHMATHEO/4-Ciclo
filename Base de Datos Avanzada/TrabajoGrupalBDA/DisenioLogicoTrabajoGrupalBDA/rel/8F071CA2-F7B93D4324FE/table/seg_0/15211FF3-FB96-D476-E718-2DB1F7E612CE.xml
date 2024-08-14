@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="15211FF3-FB96-D476-E718-2DB1F7E612CE" name="rangos">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:36:15 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_Rango" id="8B2C0E86-AE23-6BC3-80A7-8EE5ADC9FA37">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:42:04 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="55257877-66E5-2971-5585-6974BD88A163">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:42:04 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="color_Cinta" id="614D7506-E8EB-FF5E-E9EB-F68B1617E51F">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:42:04 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CD98A4E5-A257-4D41-057A-1C713874E14F" name="rangos_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-11 01:29:48 UTC</createdTime>
+<ownerDesignName>DisenioLogicoTrabajoGrupalBDA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B2C0E86-AE23-6BC3-80A7-8EE5ADC9FA37"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

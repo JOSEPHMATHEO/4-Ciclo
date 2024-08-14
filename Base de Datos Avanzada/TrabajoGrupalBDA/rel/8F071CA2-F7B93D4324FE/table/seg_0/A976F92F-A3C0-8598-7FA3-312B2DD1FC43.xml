@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A976F92F-A3C0-8598-7FA3-312B2DD1FC43" name="instructores">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:26:42 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_Instructor" id="98DF7A28-836A-DD10-FA75-5D8143B82D84">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:35:46 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_Inicio" id="0602FA3B-CBDC-5799-0ABD-B4E871CABADB">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:35:46 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_Instructor" id="3B639D0F-D30A-166A-6C6D-295D707C3F02">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:35:46 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C482909-8E71-1EE1-8AFC-EB120BCD5927" name="instructores_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-10 04:35:46 UTC</createdTime>
+<ownerDesignName>TrabajoGrupalBDA</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98DF7A28-836A-DD10-FA75-5D8143B82D84"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
