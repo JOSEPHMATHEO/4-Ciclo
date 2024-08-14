@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C7D53FCB-7055-15F6-80CF-AFF7400B9C56" name="ejemplares">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:00:19 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idEjemplar" id="355C8C9D-2BDB-0A8D-108E-050E66FCF47E">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:01:24 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ubicacion" id="E79AC91E-0462-A449-FCE8-694DA332BF99">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:02:58 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status" id="B953111D-60A6-E27E-E6B3-33D549423F5B">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:02:58 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="idLibro" id="30B855A5-75C4-DEB4-C45C-A094EFD6FBF7">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:36:38 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE5905B5-610E-0B69-F6DF-F9A47C0CDC78" referredColumn="3FEDB4DA-D76B-B4B7-F3FC-C994AC23E787"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EC0705EE-694A-B6F3-FE7F-BDE6177CE29A" name="ejemplares_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:01:24 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="355C8C9D-2BDB-0A8D-108E-050E66FCF47E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6FB1425A-5E65-95CF-739F-4AC4221C8B38" name="idLibrosv2">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:36:38 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30B855A5-75C4-DEB4-C45C-A094EFD6FBF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

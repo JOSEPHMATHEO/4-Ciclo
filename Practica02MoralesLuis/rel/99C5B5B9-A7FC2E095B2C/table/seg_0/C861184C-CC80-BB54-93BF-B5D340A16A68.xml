@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C861184C-CC80-BB54-93BF-B5D340A16A68" name="prestamos">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 22:50:46 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idPrestamos" id="88DDEB99-A85E-2CC8-82BF-A43C8F81E213">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 22:55:16 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fechaPrestamo " id="680172AD-9D02-1DE8-3F7A-C38775BA3F62">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 22:57:46 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fechaVencimiento" id="70FDC669-8925-840C-943E-0316C39B351E">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 22:58:19 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fechaDevolucion" id="2BA9CCBC-9841-D6C2-90F2-D81044CB5537">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 22:59:09 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="observacion" id="590CCF0C-69BB-9CB5-76F7-9D83352AC1D5">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 22:59:09 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="idEjemplar" id="D9D296F1-CED0-AA4C-7825-C4DDC9837646">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:37:20 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6295EACA-BC4D-D76E-E3A1-4EAC9AC648A6" referredColumn="355C8C9D-2BDB-0A8D-108E-050E66FCF47E"/>
+</associations>
+</Column>
+<Column name="cedula" id="8EAE9DAC-2545-AA67-B6F7-F5A544C53540">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:39:04 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6C259EE4-BB4C-32AF-6BBC-BA78EDDCCAD7" referredColumn="42C938FC-19AF-D393-D623-EC17230D5559"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FA8B4544-1AA4-8450-501B-1C6746CA6457" name="prestamos_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 22:55:16 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88DDEB99-A85E-2CC8-82BF-A43C8F81E213"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EA869C4F-0F14-FEEC-F7DE-2FC29E083E5E" name="idEjemplar">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:37:20 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D9D296F1-CED0-AA4C-7825-C4DDC9837646"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D244CE13-1A7F-528E-C493-E175F23686F6" name="cedula">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:39:04 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8EAE9DAC-2545-AA67-B6F7-F5A544C53540"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

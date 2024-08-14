@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CF10FCA9-5278-A972-CDBB-7B29381EBB82" containerWithKeyObject="DC6A6AA5-FFAC-03FE-B103-29EB26ADC6AF" localFKIndex="02D63C24-94C8-DB4E-57DE-1C2D18479FBD" name="Titulos_Usuarios_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:19:35 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<referredTableLongName>Usuarios</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>77CBFD8A-D07F-2D44-937F-DE51495A6CE5</referredTableID>
+<keyObject>EE17102C-0B98-8DD8-4AA5-7724FCB58309</keyObject>
+<referredKeyID>EE17102C-0B98-8DD8-4AA5-7724FCB58309</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cedula</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

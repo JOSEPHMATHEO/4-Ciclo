@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D1A87907-37C6-486C-4B6A-02236CE71F02" name="Alquileres">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:54:18 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nro_horas" id="6AF7ECFA-4AF5-113D-9720-20D3CA7450DC">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:01:35 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Usuarios_cedula" id="DEBFAF0E-9F64-1BB5-3F17-FC0348280699">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:56:24 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FEBC23D7-1068-46B9-C98E-7D76CEC37450" referredColumn="287B6639-7FE4-FB9F-FDCB-96A770CD699A"/>
+</associations>
+</Column>
+<Column name="fecha_hora_p" id="2A9C80A8-A23B-4576-BB66-F226F926496C">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:01:35 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Biciletas_nro_registro" id="F2AAC12B-53BC-E5CA-0384-2BE313DA4B20">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:56:57 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D3AEDC73-51A8-17B3-2F14-0980E6036005" referredColumn="F61BC800-8B2A-2DA1-1EDC-203E950E4E08"/>
+</associations>
+</Column>
+<Column name="id_alquiler" id="82BCAAC1-F5B4-A97E-FD51-F0289BE800EB">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:26:20 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_hora_d" id="A450CACA-A273-B483-4191-BB016D093BC4">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:01:35 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C61C0726-02E0-B24D-07DA-04A8D3428531" name="Alquileres_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:58:18 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82BCAAC1-F5B4-A97E-FD51-F0289BE800EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="55A1BE76-DA86-2026-705E-7911FDFB8F93" name="Alquileres_Usuarios_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:56:24 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DEBFAF0E-9F64-1BB5-3F17-FC0348280699"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2764A417-E202-D987-C46D-F7450BE39857" name="Alquileres_Biciletas_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:56:57 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F2AAC12B-53BC-E5CA-0384-2BE313DA4B20"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

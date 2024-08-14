@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0709AED7-F23A-FD96-1067-4A5AFE018700" name="editoriales">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:07:50 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idEdt" id="394DFA25-0DF0-BD1B-4BAA-EF189D926F97">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:10:10 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombreEdt" id="1DCC742E-EAF1-E83D-35F6-D75A72723890">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:10:10 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pais" id="D9E63AF9-C354-2F2E-7F12-F6BE5D836415">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:10:10 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="web" id="F56D4C90-90FC-2F99-7AEC-B55417891C0C">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:10:10 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="22D4B0D2-5610-1435-2FA6-985119D5A63F" name="editoriales_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:10:10 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="394DFA25-0DF0-BD1B-4BAA-EF189D926F97"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,1 @@
+SELECT * FROM hr.my_employee;
