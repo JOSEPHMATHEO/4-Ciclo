@@ -1,0 +1,154 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F8C7D52C-6217-7847-ABD2-FD4CE7321E08" name="Biciletas">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:52:54 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nro_registro" id="F61BC800-8B2A-2DA1-1EDC-203E950E4E08">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:53:52 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="marca" id="D20167DF-C951-2CFB-590B-6A47E91ED26D">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:53:52 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="modelo" id="F6EFCEFC-3458-2462-69A0-B563931097C5">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:53:52 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="33750068-E3B5-74AC-1E2B-23726AF141A6">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:53:52 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="color" id="7E6FCF24-D848-277D-20AD-7A0664DEBE32">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:53:52 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="B86CE489-1897-7584-6F83-3B7896F8428E">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:53:52 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Rastreadores_numero" id="BD40645F-B19E-DD53-0655-D81160DB96CB">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:05:45 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E1E44EA2-0748-D808-41C5-1593D29942E7" referredColumn="6FFDE58A-8066-5985-0607-7726AE7DE668"/>
+</associations>
+</Column>
+<Column name="fecha_instalacion_rastreador" id="63892501-739E-4C41-8F43-17957C364C29">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:09:52 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="latitud_utlima" id="6009EEF4-B52D-2C73-3105-B123010AB149">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:12:27 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="longitud_ultima" id="CF74CD49-736B-35B5-7EC3-7E4F82DEBD6C">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:12:27 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9C7FA89E-2E35-45A4-BFBD-0E77F2856766" name="Biciletas_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:55:25 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F61BC800-8B2A-2DA1-1EDC-203E950E4E08"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0A532487-8664-7448-C58D-4401F2B506B8" name="Biciletas__UN">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-22 16:36:19 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD40645F-B19E-DD53-0655-D81160DB96CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2AB0EB19-D661-4AEC-5F1E-EFD243799367" name="Biciletas_Rastreadores_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:05:45 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD40645F-B19E-DD53-0655-D81160DB96CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

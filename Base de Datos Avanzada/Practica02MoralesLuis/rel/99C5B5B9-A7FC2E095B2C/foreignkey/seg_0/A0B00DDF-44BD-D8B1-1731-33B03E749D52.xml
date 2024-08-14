@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A0B00DDF-44BD-D8B1-1731-33B03E749D52" containerWithKeyObject="67ADC385-87ED-00DD-FD1B-D2C206B12664" localFKIndex="6749002B-9673-DFD4-45D9-5819F8A50B18" name="codAreaPadre">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:31:19 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<referredTableLongName>areas_conocimientp</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>67ADC385-87ED-00DD-FD1B-D2C206B12664</referredTableID>
+<keyObject>3B629CF6-4C31-241B-CBF9-16484A7C6294</keyObject>
+<referredKeyID>3B629CF6-4C31-241B-CBF9-16484A7C6294</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>codAreas</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

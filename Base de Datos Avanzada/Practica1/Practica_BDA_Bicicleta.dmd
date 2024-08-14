@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Practica_BDA_Bicicleta" id="6832DCDF-8AC6-ED00-CD50-B093105279F8" version="3.5">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:49:52 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>6832DCDF-8AC6-ED00-CD50-B093105279F8</designId>
+</OSDM_Design>

@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DC6A6AA5-FFAC-03FE-B103-29EB26ADC6AF" name="Titulos">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:18:49 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Usuarios_cedula" id="F895B1F7-C6A7-B7C1-F8A6-D54AAEDE611D">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:19:35 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CF10FCA9-5278-A972-CDBB-7B29381EBB82" referredColumn="287B6639-7FE4-FB9F-FDCB-96A770CD699A"/>
+</associations>
+</Column>
+<Column name="titulo" id="A3370F55-AE26-A612-5422-C337292CEDA3">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:23:04 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="277C4C3D-1489-57BA-2040-2B9DACCF8604" name="Titulos_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:23:04 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F895B1F7-C6A7-B7C1-F8A6-D54AAEDE611D"/>
+<colUsage columnID="A3370F55-AE26-A612-5422-C337292CEDA3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="02D63C24-94C8-DB4E-57DE-1C2D18479FBD" name="Titulos_Usuarios_FK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 13:19:35 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F895B1F7-C6A7-B7C1-F8A6-D54AAEDE611D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

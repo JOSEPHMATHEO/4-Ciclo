@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="E0A609A6-DC9D-E7EE-11D0-29359012412C" mainViewID="BB1A3A7B-562E-509B-C296-11A8C0CD6A80">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-04-17 12:49:55 UTC</createdTime>
+<ownerDesignName>Practica_BDA_Bicicleta</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

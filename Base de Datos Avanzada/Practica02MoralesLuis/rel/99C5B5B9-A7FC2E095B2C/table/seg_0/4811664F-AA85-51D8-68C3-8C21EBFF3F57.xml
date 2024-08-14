@@ -1,0 +1,183 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4811664F-AA85-51D8-68C3-8C21EBFF3F57" name="libros">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:10:28 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idLibro" id="3FEDB4DA-D76B-B4B7-F3FC-C994AC23E787">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:12:06 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="isbn" id="A7C344C6-2CD3-880D-EA00-03EFB81634CC">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:12:06 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="titulo" id="F50A51CA-6426-B372-3ECF-90F09F673822">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:12:06 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sinopsis" id="635F1F95-C23B-5236-3419-1B577C047295">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:16:35 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2500</dataTypeSize>
+<ownDataTypeParameters>2500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numPaginas" id="E8B5EB26-0D56-00B4-553A-B3D7B6CD1802">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:16:35 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="idioma" id="D9BD6A5C-A5C7-98F2-EA16-9719AED2033B">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:17:23 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="anio" id="6C754E9A-30B1-8E8E-A412-D66F09C0B62B">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:18:32 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nroEdicion" id="0F6F49D2-1E98-D378-5E71-7B14C9DE7B46">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:19:14 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="imgPortada" id="0120DBCF-8977-09BE-6C7C-A27EB18DBD30">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:20:08 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="codArea" id="3AC1E222-17DD-4541-5EB2-1C6B36D15B29">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:33:02 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="378CE254-F05B-36B2-4E7B-2E3FC123AF57" referredColumn="67C3E69A-86BA-A90C-D246-BE1079311F4A"/>
+</associations>
+</Column>
+<Column name="idEdt" id="7C23B542-D258-A0F4-5F05-03D00D1A09E1">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:34:49 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6E75A641-1875-B64C-38E1-ACF3650FA12C" referredColumn="394DFA25-0DF0-BD1B-4BAA-EF189D926F97"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6EA2D30E-5E97-8B41-BF0F-C31DF38BB85C" name="libros_PK">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:12:06 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3FEDB4DA-D76B-B4B7-F3FC-C994AC23E787"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1531D982-99D0-E3B4-4606-EF01EA954D84" name="libros__UN">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:12:06 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7C344C6-2CD3-880D-EA00-03EFB81634CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="79144FF4-FE52-AB4F-D9E8-C0B73B382528" name="codArea">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:33:02 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3AC1E222-17DD-4541-5EB2-1C6B36D15B29"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB30396F-E693-2C15-2969-7344B034E1C9" name="idEdt">
+<createdBy>JosephMatheo</createdBy>
+<createdTime>2024-05-06 23:34:49 UTC</createdTime>
+<ownerDesignName>Practica02MoralesLuis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C23B542-D258-A0F4-5F05-03D00D1A09E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
